@@ -1,4 +1,122 @@
-@import 'vendor/_normalize';
+@import 'vendor/fonts.scss';
+
+@import 'vendor/_normalize.scss';
+
+@import 'vendor/vars.scss';
+
+html{
+	scrollbar-gutter: stable;
+}
+
+body {
+	font-family: "Inter";
+	overflow-x: hidden;
+
+	&.lock{
+		overflow: hidden;
+	}
+}
+
+.ham {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.hamRotate.active {
+	transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+	transform: rotate(180deg);
+}
+
+.line {
+	fill: none;
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+	stroke: $prim;
+	stroke-width: 5.5;
+	stroke-linecap: round;
+}
+
+.ham1 .top {
+	stroke-dasharray: 40 139;
+}
+
+.ham1 .bottom {
+	stroke-dasharray: 40 180;
+}
+
+.ham1.active .top {
+	stroke-dashoffset: -98px;
+}
+
+.ham1.active .bottom {
+	stroke-dashoffset: -138px;
+}
+
+.primary-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 48px;
+	background-color: $bg-ter;
+	gap: 15px;
+	border-radius: 20px;
+
+	&__plus {
+		width: 32px;
+		height: 32px;
+		border-radius: 8px;
+		background-color: $bg-prim;
+		position: relative;
+		transition: background-color 0.3s;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 12px;
+			height: 2px;
+			position: absolute;
+			top: 15px;
+			left: 10px;
+			background-color: $blue;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 2px;
+			height: 12px;
+			position: absolute;
+			top: 10px;
+			left: 15px;
+			background-color: $blue;
+			transition:transform 0.3s;
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 16px;
+		color: #6398FD;
+	}
+
+	@media(hover:hover) {
+		&:hover{
+			background-color: #82ADFD4D;
+
+			.primary-button__plus::before{
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
 
 
+
+@import 'vendor/header.scss'
 /* /GO TO TOP BUTTON */
