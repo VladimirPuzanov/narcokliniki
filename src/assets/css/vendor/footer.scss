@@ -1,0 +1,199 @@
+.footer {
+	padding: 10px 6px;
+
+	&__container {
+		background-color: $bg-ter;
+		border-radius: 30px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		padding: 30px 10px;
+		max-width: 1880px;
+		margin: 0 auto;
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+		&_contacts {
+			gap: 14px;
+
+			.footer__title {
+				margin-bottom: 2px;
+			}
+		}
+
+		&_info {
+			p:not(.footer__title) {
+				color: $sec;
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__logo {
+		gap: 0px;
+		margin: 0;
+
+		.logo__img {
+			width: 82px;
+			height: 82px;
+		}
+
+		.logo__text {
+			max-width: 120px;
+			font-size: 28px;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 16px;
+		color: $prim;
+		margin-bottom: 6px;
+	}
+
+	&__link {
+		color: #2B3746CC;
+		font-size: 16px;
+		transition: color 0.3s;
+
+		@media(hover : hover) {
+			&:hover {
+				color: #6398FD;
+			}
+		}
+	}
+
+	&__contact {
+		p {
+			color: #2B3746CC;
+			margin-bottom: 2px;
+			font-size: 16px;
+		}
+
+		a {
+			color: #6398FD;
+			font-size: 16px;
+			font-weight: 600;
+			transition: opacity 0.3s;
+
+			@media(hover : hover) {
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+
+	&__contact-info {
+		color: #2B3746CC;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
+
+@media(min-width: 720px) {
+	.footer {
+		&__container {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__col {
+			flex-basis: calc(50% - 20px);
+
+			&_logo {
+				flex-basis: 100%;
+			}
+		}
+	}
+}
+
+@media(min-width: 1024px) {
+	.footer {
+		&__container {
+			padding: 80px 30px;
+		}
+
+		&__col {
+			flex-basis: calc(25% - 30px);
+
+			&_logo {
+				flex-basis: calc(25% - 30px);
+				order: 1;
+			}
+
+			&_links{
+				gap: 20px;
+				order: 2;
+				a{
+					font-size: 18px;
+				}
+			}
+
+			&_contacts{
+				gap: 24px;
+				order: 3;
+
+				.footer__title{
+					margin-bottom: 6px;
+				}
+			}
+			
+			&_info{
+				gap: 10px;
+				order: 4;
+				.footer__title{
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		&__logo{
+			.logo__img{
+				width: 84px;
+				height: 84px;
+			}
+
+			.logo__text{
+				font-size: 32px;
+				line-height: 33px;
+			}
+		}
+
+		&__title{
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		&__contact{
+			p{
+				font-size: 18px;
+				margin-bottom: 4px;
+			}
+
+			a{
+				font-size: 18px;
+			}
+		}
+
+		&__contact-info{
+			font-size: 18px;
+		}
+	}
+}
+
+@media(min-width: 1400px) {
+	.footer {
+		&__container {
+			padding: 80px 150px;
+		}
+	}
+}
