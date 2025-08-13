@@ -1,0 +1,86 @@
+.steps {
+	padding: 50px 10px;
+
+	&__container {
+		padding: 30px 20px;
+		padding-bottom: 200px;
+		background-color: $blue-color;
+		border-radius: 30px;
+		position: relative;
+		max-width: 1880px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	&__title {
+		color: $bg-prim;
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 24px;
+		font-weight: 600;
+	}
+
+	&__subtitle {
+		color: $bg-prim;
+		text-align: center;
+		font-size: 20px;
+		margin-bottom: 40px;
+	}
+
+	&__button {
+		margin: 0 auto;
+
+		@media(hover:hover) {
+			&:hover {
+				outline: 1px solid $bg-prim;
+
+				.primary-button__text {
+					color: $bg-prim;
+				}
+			}
+		}
+	}
+}
+
+.steps {
+	&__container {
+		padding-bottom: 150px;
+	}
+
+	&__background {
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 940px);
+		width: 1880px;
+
+		&_1 {
+			position: absolute;
+			bottom: 0;
+		}
+
+		&_2 {
+			position: absolute;
+			width: 20%;
+			bottom: 0;
+			left: 26.5%;
+		}
+
+		svg {
+			
+		}
+	}
+}
+
+@media(max-width: 1024px){
+	.steps{
+		&__background{
+			width: 1024px;
+			bottom: 0;
+			left: 0;
+
+			@media(max-width: 580px){
+				left: -40%;
+			}
+		}
+	}
+}

@@ -1,0 +1,122 @@
+.to_animate {
+	transition: opacity 0.8s, transform 0.8s;
+}
+
+.draw-center {
+	transition: mask-size 1s;
+	&.to_animate {
+		mask-image: url("../img/animations/mask.svg");
+		mask-repeat: repeat-y;
+		mask-position: center;
+		mask-size: 0;
+
+		&.animated {
+			mask-size: 100%;
+		}
+	}
+}
+
+.draw-left {
+	transition: mask-size 1s;
+	&.to_animate {
+		mask-image: url("../img/animations/mask.svg");
+		mask-repeat: repeat-y;
+		mask-size: 0;
+
+		&.animated {
+			mask-size: 100%;
+		}
+	}
+}
+
+.down-fade {
+	&.to_animate {
+		opacity: 0;
+		transform: translateY(50px);
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+.up-fade {
+	&.to_animate {
+		opacity: 0;
+		transform: translateY(-50px);
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+.left-fade {
+	&.to_animate {
+		opacity: 0;
+		transform: translateX(-50px);
+
+		&.animated {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}
+
+.right-fade {
+	&.to_animate {
+		opacity: 0;
+		transform: translateX(50px);
+
+		&.animated {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}
+
+.rotate-left {
+	&.to_animate {
+		transform: rotate3d(0, 1, 0, 90deg);
+
+		&.animated {
+			transform: none;
+		}
+	}
+}
+
+.rotate-up {
+	&.to_animate {
+		transform: rotate3d(0, 0, 1, 90deg);
+
+		&.animated {
+			transform: none;
+		}
+	}
+}
+
+.fade-out {
+	&.to_animate {
+		opacity: 0;
+		transform: scale(0.5);
+
+		&.animated {
+			opacity: 1;
+			transform: none;
+		}
+	}
+}
+
+.fade-in {
+	&.to_animate {
+		opacity: 0;
+		transform: scale(1.5);
+
+		&.animated {
+			opacity: 1;
+			transform: none;
+		}
+	}
+}

@@ -4,16 +4,25 @@
 
 @import 'vendor/vars.scss';
 
+@import 'vendor/animations.scss';
+
 html{
 	scrollbar-gutter: stable;
 }
 
 body {
 	font-family: "Inter";
-	overflow-x: hidden;
 
 	&.lock{
 		overflow: hidden;
+	}
+}
+
+.page{
+	overflow: hidden;
+	padding-top: 82px;
+	@media(min-width: 1024px){
+		padding-top: 109px;
 	}
 }
 
@@ -114,7 +123,17 @@ body {
 			}
 		}
 	}
+
+	@media(max-width: 1023px){
+		padding: 14px;
+		border-radius: 10px;
+		&__text{
+			font-size: 16px;
+		}
+	}
 }
 
 @import 'vendor/header.scss';
 @import 'vendor/footer.scss';
+@import 'vendor/intro.scss';
+@import 'vendor/steps.scss';

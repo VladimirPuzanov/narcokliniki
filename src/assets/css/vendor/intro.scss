@@ -1,0 +1,183 @@
+.intro {
+	padding: 20px 6px 50px;
+	overflow: hidden;
+
+	&__decor {
+		display: none;
+	}
+
+	&__container {
+		padding: 30px 10px;
+		background-color: $bg-ter;
+		border-radius: 30px;
+		overflow: hidden;
+	}
+
+	&__line_mobile {
+		height: 180px;
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+
+		svg {
+			position: absolute;
+			top: -60px;
+			left: calc(50% - 265px);
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 600;
+		font-size: 28px;
+		margin-bottom: 30px;
+		color: $prim;
+
+		span {
+			color: $blue;
+			display: block;
+		}
+	}
+
+	&__subtitle {
+		color: $prim;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin: 0 auto;
+		max-width: 600px;
+	}
+
+	&__info-item {
+		padding: 40px;
+		width: 100%;
+		position: relative;
+		text-align: center;
+		background-color: $bg-prim;
+		border-radius: 20px;
+		position: relative;
+
+		p {
+			color: #6398FD;
+			font-weight: 700;
+			font-size: 24px;
+			transition: opacity 1s, transform 1s;
+		}
+
+		div {
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			width: 100%;
+			display: flex;
+		}
+
+		span {
+			padding: 8px 14px;
+			background-color: $bg-prim;
+			border-radius: 10px;
+			border: 2px solid $light-blue;
+			margin: 0 auto;
+			color: $grey;
+			font-size: 16pxz;
+		}
+	}
+}
+
+@media(min-width: 1024px) {
+	.intro {
+		margin-bottom: 120px;
+		&__container {
+			padding: 85px 40px 170px;
+			position: relative;
+			max-width: 1880px;
+			margin: 0 auto;
+		}
+
+		&__title {
+			max-width: 1170px;
+			margin: 0 auto;
+			margin-bottom: 30px;
+			font-size: 72px;
+		}
+
+		&__subtitle {
+			font-size: 20px;
+			line-height: 28px;
+			max-width: 585px;
+			margin: 0 auto;
+			margin-bottom: 125px;
+		}
+
+		&__line_mobile {
+			top: 410px;
+			left: auto;
+			right: 20px;
+			position: absolute;
+			width: 100%;
+			scale: 1.7;
+			rotate: -18deg;
+			max-width: 531px;
+
+			svg {
+				left: 0px;
+			}
+		}
+
+		&__row {
+			gap: 20px;
+			flex-direction: row;
+			max-width: 100%;
+		}
+
+		&__info-item {
+			padding: 53px 0;
+			border-radius: 40px;
+
+			p {
+				font-size: 36px;
+			}
+
+			span {
+				font-size: 18px;
+			}
+
+			&_decor {
+				position: relative;
+			}
+		}
+	}
+}
+
+@media(min-width: 1240px) {
+	.intro {
+		&__decor {
+			display: block;
+			position: absolute;
+
+			&_1 {
+				bottom: 25px;
+				left: -145px;
+			}
+
+			&_2 {
+				top: -20px;
+			}
+		}
+	}
+}
+
+@media(min-width: 1580px) {
+	.intro {
+		&__container {
+			padding-left: 150px;
+			padding-right: 150px;
+		}
+	}
+}
