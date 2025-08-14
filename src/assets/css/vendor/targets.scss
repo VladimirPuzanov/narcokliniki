@@ -1,0 +1,110 @@
+.target{
+	padding: 50px 16px;
+
+	&__container{
+		margin: 0 auto;
+		max-width: 1880px;
+	}
+
+	&__title{
+		color: $prim;
+		font-weight: 600;
+		font-size: 30px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	&__slide{
+		background-color: $bg-sec;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+
+	&__background{
+		margin-top: auto;
+		position: relative;
+
+		svg{
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+		}
+	}
+
+	&__image{
+		max-width: 194px;
+		margin-left: auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__content{
+		padding: 20px;
+		margin-bottom: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 15px;
+	}
+
+	&__digit{
+		display: flex;
+		width: 36px;
+		height: 36px;
+		justify-content: center;
+		align-items: center;
+		background-color: $bg-prim;
+		border-radius: 10px;
+		border: 1px solid #EDEDEE;
+		font-size: 16px;
+		color: $grey;
+	}
+
+	&__name{
+		color: $prim;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	&__text{
+		color: $sec;
+		font-size: 14px;
+	}
+}
+
+@media(min-width: 1024px){
+	.target{
+		margin-bottom: 100px;
+
+		&__title{
+			margin-bottom: 80px;
+			font-size: 64px;
+		}
+
+		&__content{
+			padding: 40px;
+			margin-bottom: 50px;
+		}
+
+		&__digit{
+			width: 50px;
+			height: 50px;
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+
+		&__name{
+			font-size: 30px;
+		}
+
+		&__text{
+			font-size: 18px;
+		}
+
+		&__image{
+			max-width: 296px;
+		}
+	}
+}

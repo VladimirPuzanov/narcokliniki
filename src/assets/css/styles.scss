@@ -75,6 +75,7 @@ body {
 	background-color: $bg-ter;
 	gap: 15px;
 	border-radius: 20px;
+	transition: 0.3s;
 
 	&__plus {
 		width: 32px;
@@ -137,3 +138,6 @@ body {
 @import 'vendor/footer.scss';
 @import 'vendor/intro.scss';
 @import 'vendor/steps.scss';
+@import 'vendor/targets.scss';
+@import 'vendor/princ.scss';
+@import 'vendor/best-clinics.scss';
