@@ -134,6 +134,32 @@ body {
 	}
 }
 
+.nav-buttons{
+	display: flex;
+	gap: 10px;
+}
+
+.nav-button{
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+
+	svg{
+		max-height: 30px
+	}
+
+	&_blue{
+		background-color: #D0E0FE66;
+	}
+
+	&_back{
+		transform: rotate(180deg);
+	}
+}
+
 @import 'vendor/header.scss';
 @import 'vendor/footer.scss';
 @import 'vendor/intro.scss';

@@ -100,5 +100,22 @@ advantagesSwiper = new Swiper(document.querySelector('.target__swiper'), {
 			spaceBetween: 30,
 		},
 	}
-}
-);
+});
+
+//Слайдер с клиниками
+clinicsSwiper = new Swiper(document.querySelector('.best-clinics__swiper'), {
+	direction: 'horizontal',
+	slidesPerView: 1.1,
+	grabCursor: true,
+	spaceBetween: 10,
+	breakpoints: {
+		510: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+	}
+});

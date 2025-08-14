@@ -3,7 +3,7 @@
 }
 
 .draw-center {
-	transition: mask-size 1s;
+	transition: mask-size 2s;
 	&.to_animate {
 		mask-image: url("../img/animations/mask.svg");
 		mask-repeat: repeat-y;
@@ -17,7 +17,7 @@
 }
 
 .draw-left {
-	transition: mask-size 1s;
+	transition: mask-size 2s;
 	&.to_animate {
 		mask-image: url("../img/animations/mask.svg");
 		mask-repeat: repeat-y;

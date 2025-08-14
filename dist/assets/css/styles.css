@@ -332,9 +332,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .draw-center {
-  transition: -webkit-mask-size 1s;
-  transition: mask-size 1s;
-  transition: mask-size 1s, -webkit-mask-size 1s;
+  transition: -webkit-mask-size 2s;
+  transition: mask-size 2s;
+  transition: mask-size 2s, -webkit-mask-size 2s;
 }
 .draw-center.to_animate {
   -webkit-mask-image: url("../img/animations/mask.svg");
@@ -352,9 +352,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .draw-left {
-  transition: -webkit-mask-size 1s;
-  transition: mask-size 1s;
-  transition: mask-size 1s, -webkit-mask-size 1s;
+  transition: -webkit-mask-size 2s;
+  transition: mask-size 2s;
+  transition: mask-size 2s, -webkit-mask-size 2s;
 }
 .draw-left.to_animate {
   -webkit-mask-image: url("../img/animations/mask.svg");
@@ -559,6 +559,29 @@ body.lock {
   .primary-button__text {
     font-size: 16px;
   }
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.nav-button svg {
+  max-height: 30px;
+}
+.nav-button_blue {
+  background-color: rgba(208, 224, 254, 0.4);
+}
+.nav-button_back {
+  transform: rotate(180deg);
 }
 
 .header {
@@ -1171,6 +1194,8 @@ body.lock {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+}
+.target__slide.swiper-slide {
   height: auto;
 }
 .target__background {
@@ -1346,5 +1371,149 @@ body.lock {
   }
   .princ__text {
     font-size: 18px;
+  }
+}
+.best-clinics {
+  padding: 50px 16px;
+}
+.best-clinics__container {
+  max-width: 1880px;
+  margin: 0 auto;
+}
+.best-clinics__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.best-clinics__title {
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+}
+.best-clinics__card {
+  position: relative;
+}
+.best-clinics__image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 260px;
+  margin-bottom: 26px;
+}
+.best-clinics__image {
+  width: 100%;
+  height: 100%;
+}
+.best-clinics__image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+}
+.best-clinics__tags {
+  position: absolute;
+  padding: 20px;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.best-clinics__tag {
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+.best-clinics__tag_orange {
+  font-size: 14px;
+  color: #F68A0F;
+  background-color: #FFF5EE;
+}
+.best-clinics__tag_purple {
+  color: #9740EE;
+  background-color: #F5EFFF;
+}
+.best-clinics__name {
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.best-clinics__name span {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  background-color: #6398FD;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.best-clinics__name span svg {
+  max-width: 10px;
+}
+.best-clinics__info {
+  color: #8A8C99;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.best-clinics__row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.best-clinics__reviews {
+  padding: 4px 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #8A8C99;
+  border-radius: 10px;
+  background-color: rgba(138, 140, 153, 0.0901960784);
+}
+.best-clinics__reviews svg {
+  max-width: 10px;
+  margin-right: 6px;
+}
+.best-clinics__price {
+  color: #8A8C99;
+  font-size: 14px;
+}
+.best-clinics__adress {
+  color: #4E4E4E;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.best-clinics__phone {
+  padding: 10px;
+  border-radius: 10px;
+  color: #6398FD;
+  background-color: #EBF3FE;
+  display: inline-block;
+  transition: color 0.3s, background-color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+@media (hover: hover) {
+  .best-clinics__phone:hover {
+    color: #FFFFFF;
+    background-color: #82ADFD;
+  }
+}
+.best-clinics__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.best-clinics__buttons {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .best-clinics__buttons {
+    display: flex;
   }
 }
