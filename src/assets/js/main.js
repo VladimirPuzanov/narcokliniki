@@ -108,13 +108,20 @@ clinicsSwiper = new Swiper(document.querySelector('.best-clinics__swiper'), {
 	slidesPerView: 1.1,
 	grabCursor: true,
 	spaceBetween: 10,
+	navigation: {
+		nextEl: document.querySelector(".best-clinics__button_next"),
+		prevEl: document.querySelector(".best-clinics__button_back")
+	},
+	pagination: {
+    el: ".best-clinics__pagination"
+  },
 	breakpoints: {
 		510: {
-			slidesPerView: 2,
+			slidesPerView: 2.2,
 			spaceBetween: 20,
 		},
 		1024: {
-			slidesPerView: 3,
+			slidesPerView: 3.2,
 			spaceBetween: 30,
 		},
 	}

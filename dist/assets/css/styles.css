@@ -573,12 +573,26 @@ body.lock {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: 0.3s;
 }
 .nav-button svg {
   max-height: 30px;
+  filter: brightness(1);
+  transition: 0.3s;
 }
 .nav-button_blue {
   background-color: rgba(208, 224, 254, 0.4);
+}
+.nav-button_blue.swiper-button-disabled {
+  opacity: 0.5;
+}
+@media (hover: hover) {
+  .nav-button_blue:not(.swiper-button-disabled):hover {
+    background-color: #4A7AD4;
+  }
+  .nav-button_blue:not(.swiper-button-disabled):hover svg {
+    filter: brightness(3);
+  }
 }
 .nav-button_back {
   transform: rotate(180deg);
@@ -1511,9 +1525,81 @@ body.lock {
 .best-clinics__buttons {
   display: none;
 }
+.best-clinics__pagination {
+  margin-top: 40px;
+  text-align: center;
+}
+.best-clinics__pagination .swiper-pagination-bullet {
+  margin: 0 3px !important;
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #6398FD !important;
+  opacity: 0.4 !important;
+}
+.best-clinics__pagination .swiper-pagination-bullet-active {
+  background-color: #6398FD !important;
+  opacity: 1 !important;
+}
 
 @media (min-width: 1024px) {
   .best-clinics__buttons {
     display: flex;
   }
+  .best-clinics__title-row {
+    margin-bottom: 60px;
+  }
+  .best-clinics__title {
+    font-size: 64px;
+  }
+  .best-clinics__image-wrapper {
+    height: 280px;
+    margin-bottom: 45px;
+  }
+  .best-clinics__pagination {
+    display: none;
+  }
+  .best-clinics__tag {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  .best-clinics__name {
+    font-size: 30px;
+  }
+  .best-clinics__name span {
+    width: 28px;
+    height: 28px;
+  }
+  .best-clinics__name span svg {
+    max-width: 14px;
+  }
+  .best-clinics__info {
+    font-size: 16px;
+  }
+  .best-clinics__reviews {
+    font-size: 18px;
+  }
+  .best-clinics__price {
+    font-size: 16px;
+  }
+  .best-clinics__adress {
+    font-size: 16px;
+  }
+  .best-clinics__phone {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+.smi {
+  padding: 50px 6px;
+}
+.smi__container {
+  border-radius: 30px;
+  background-color: #82ADFD;
+  padding: 30px 10px;
+}
+.smi__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }

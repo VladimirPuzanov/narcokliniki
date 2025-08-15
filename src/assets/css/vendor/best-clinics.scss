@@ -158,12 +158,86 @@
 	&__buttons {
 		display: none;
 	}
+
+	&__pagination{
+		margin-top: 40px;
+		text-align: center;
+
+		.swiper-pagination-bullet{
+			margin: 0 3px!important;
+			width: 8px!important;
+			height: 8px!important;
+			background-color: $blue-color!important;
+			opacity: 0.4!important;
+			
+
+			&-active{
+				background-color: $blue-color!important;
+				opacity: 1!important;
+			}
+		}
+	}
 }
 
 @media(min-width: 1024px) {
 	.best-clinics {
 		&__buttons {
 			display: flex;
+		}
+
+		&__title-row{
+			margin-bottom: 60px;
+		}
+
+		&__title{
+			font-size: 64px;
+		}
+
+		&__image-wrapper{
+			height: 280px;
+			margin-bottom: 45px;
+		}
+
+		&__pagination{
+			display: none;
+		}
+
+		&__tag{
+			font-size: 16px;
+			padding: 8px 12px;
+		}
+
+		&__name{
+			font-size: 30px;
+
+			span{
+				width: 28px;
+				height: 28px;
+				svg{
+					max-width: 14px;
+				}
+			}
+		}
+
+		&__info{
+			font-size: 16px;
+		}
+
+		&__reviews{
+			font-size: 18px;
+		}
+
+		&__price{
+			font-size: 16px;
+		}
+
+		&__adress{
+			font-size: 16px;
+		}
+
+		&__phone{
+			padding: 10px;
+			font-size: 18px;
 		}
 	}
 }

@@ -146,13 +146,30 @@ body {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
+	transition: 0.3s;
 
 	svg{
-		max-height: 30px
+		max-height: 30px;
+		filter: brightness(1);
+		transition: 0.3s;
 	}
 
 	&_blue{
 		background-color: #D0E0FE66;
+
+		&.swiper-button-disabled{
+			opacity: 0.5;
+		}
+
+		@media(hover : hover){
+			&:not(.swiper-button-disabled):hover{
+				background-color: #4A7AD4;
+
+				svg{
+					filter: brightness(3);
+				}
+			}
+		}
 	}
 
 	&_back{
@@ -167,3 +184,4 @@ body {
 @import 'vendor/targets.scss';
 @import 'vendor/princ.scss';
 @import 'vendor/best-clinics.scss';
+@import 'vendor/smi.scss';

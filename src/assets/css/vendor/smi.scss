@@ -1,0 +1,16 @@
+.smi{
+	padding: 50px 6px;
+
+	&__container{
+		border-radius: 30px;
+		background-color: $blue;
+		padding: 30px 10px;
+	}
+
+	&__title{
+		text-align: center;
+		font-size: 36px;
+		font-weight: 600;
+		margin-bottom: 30px;
+	}
+}
