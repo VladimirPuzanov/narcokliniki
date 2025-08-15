@@ -17,10 +17,10 @@
 	&__slide{
 		background-color: $bg-sec;
 		border-radius: 20px;
-		display: flex;
 		flex-direction: column;
 		&.swiper-slide{
 			height: auto;
+			display: flex;
 		}
 	}
 

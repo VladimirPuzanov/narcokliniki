@@ -12,5 +12,63 @@
 		font-size: 36px;
 		font-weight: 600;
 		margin-bottom: 30px;
+		color: $bg-prim;
+	}
+
+	&__card{
+		padding: 20px;
+		border-radius: 20px;
+		background-color: $bg-prim;
+		height: auto!important;
+		z-index: 2;
+	}
+
+	&__row{
+		display: flex;
+		gap: 14px;
+		margin-bottom: 100px;
+	} 
+
+	&__col{
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__name{
+		color: $prim;
+		font-weight: 600;
+		font-size: 18px;
+		background-color: $bg-prim;
+	}
+
+	&__des{
+		color: $sec;
+		font-size: 14px;
+	}
+
+	&__logo{
+		max-width: 75px;
+		padding: 9px;
+		border: 1px solid #EDEDEE;
+		border-radius: 10px;
+	}
+
+	&__text{
+		font-size: #2B3746;
+		font-size: 20px;
+	}
+
+	&__pagination{
+		text-align: center;
+		margin-top: 30px;
+		
+		.swiper-pagination-bullet{
+			background-color: $bg-prim!important;
+			opacity: 0.4!important;
+
+			&-active{
+				opacity: 1!important;
+			}
+		}
 	}
 }

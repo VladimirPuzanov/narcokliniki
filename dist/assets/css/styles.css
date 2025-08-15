@@ -1206,11 +1206,11 @@ body.lock {
 .target__slide {
   background-color: #F5F9FE;
   border-radius: 20px;
-  display: flex;
   flex-direction: column;
 }
 .target__slide.swiper-slide {
   height: auto;
+  display: flex;
 }
 .target__background {
   margin-top: auto;
@@ -1602,4 +1602,52 @@ body.lock {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 30px;
+  color: #FFFFFF;
+}
+.smi__card {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  height: auto !important;
+  z-index: 2;
+}
+.smi__row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 100px;
+}
+.smi__col {
+  display: flex;
+  flex-direction: column;
+}
+.smi__name {
+  color: #2B3746;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #FFFFFF;
+}
+.smi__des {
+  color: #8A8C99;
+  font-size: 14px;
+}
+.smi__logo {
+  max-width: 75px;
+  padding: 9px;
+  border: 1px solid #EDEDEE;
+  border-radius: 10px;
+}
+.smi__text {
+  font-size: #2B3746;
+  font-size: 20px;
+}
+.smi__pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+.smi__pagination .swiper-pagination-bullet {
+  background-color: #FFFFFF !important;
+  opacity: 0.4 !important;
+}
+.smi__pagination .swiper-pagination-bullet-active {
+  opacity: 1 !important;
 }

@@ -62,13 +62,27 @@ const observer = new IntersectionObserver((entries) => {
 			}
 			if (entry.target.classList.contains("animation-group")) {
 				animationDelay = animationDelay + 100
+				if (entry.target.getAttribute("data-delay")) {
+					animationDelay = animationDelay + 100 + parseInt(entry.target.getAttribute("data-delay"))
+				}
 			} else if (entry.target.closest("animation-group")?.classList.contains("animated")) {
 				animationDelay = 0;
+				if (entry.target.getAttribute("data-delay")) {
+					animationDelay = parseInt(entry.target.getAttribute("data-delay"))
+				}
 			}
-			setTimeout(() => {
+			if (entry.target.getAttribute("data-delay")) {
+				setTimeout(() => {
+				entry.target.classList.add("animated")
+			}, parseInt(entry.target.getAttribute("data-delay")));
+			observer.unobserve(entry.target)
+			} else {
+				setTimeout(() => {
 				entry.target.classList.add("animated")
 			}, animationDelay);
 			observer.unobserve(entry.target)
+			}
+			
 		}
 	});
 }, {
@@ -113,8 +127,8 @@ clinicsSwiper = new Swiper(document.querySelector('.best-clinics__swiper'), {
 		prevEl: document.querySelector(".best-clinics__button_back")
 	},
 	pagination: {
-    el: ".best-clinics__pagination"
-  },
+		el: ".best-clinics__pagination"
+	},
 	breakpoints: {
 		510: {
 			slidesPerView: 2.2,
@@ -123,6 +137,28 @@ clinicsSwiper = new Swiper(document.querySelector('.best-clinics__swiper'), {
 		1024: {
 			slidesPerView: 3.2,
 			spaceBetween: 30,
+		},
+	}
+});
+
+//Слайдер СМИ
+clinicsSwiper = new Swiper(document.querySelector('.smi__swiper'), {
+	direction: 'horizontal',
+	slidesPerView: 1,
+	grabCursor: true,
+	spaceBetween: 10,
+	pagination: {
+		el: ".smi__pagination"
+	},
+	breakpoints: {
+		510: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1024: {
+			grid: { rows: 2, fill: "row" },
+			slidesPerView: 2,
+			spaceBetween: 20,
 		},
 	}
 });
