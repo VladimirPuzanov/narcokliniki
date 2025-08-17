@@ -2,7 +2,7 @@
 	padding: 50px 16px;
 
 	&__container {
-		max-width: 1880px;
+		max-width: 1580px;
 		margin: 0 auto;
 	}
 
@@ -181,6 +181,8 @@
 
 @media(min-width: 1024px) {
 	.best-clinics {
+		margin-bottom: 100px;
+
 		&__buttons {
 			display: flex;
 		}

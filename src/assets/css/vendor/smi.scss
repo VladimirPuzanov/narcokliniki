@@ -5,6 +5,15 @@
 		border-radius: 30px;
 		background-color: $blue;
 		padding: 30px 10px;
+		max-width: 1880px;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__content{
+		position: relative;
+		z-index: 2;
 	}
 
 	&__title{
@@ -48,6 +57,7 @@
 
 	&__logo{
 		max-width: 75px;
+		width: 100%;
 		padding: 9px;
 		border: 1px solid #EDEDEE;
 		border-radius: 10px;
@@ -68,6 +78,192 @@
 
 			&-active{
 				opacity: 1!important;
+			}
+		}
+	}
+
+	&__manage-row{
+		display: none;
+	}
+
+	&__decor{
+		position: absolute;
+		display: none;
+
+		&_1{
+			display: block;
+			rotate: -38deg;
+			z-index: 1;
+			left: -100px;
+			top: -70px;
+			width: 215px;
+		}
+
+		&_2{
+			display: block;
+			rotate: 6deg;
+			z-index: 1;
+			right: -100px;
+			bottom:-70px;
+			width: 215px;
+		}
+	}
+}
+
+@media(min-width: 1024px){
+	.smi{
+		margin-bottom: 100px;
+
+		&__container{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			padding: 100px 50px;
+			min-height: 1062px;
+		}
+
+		&__content{
+			display: contents;
+			position: relative;
+			z-index: 2;
+		}
+
+		&__title{
+			margin-bottom: auto;
+			font-size: 64px;
+			text-align: left;
+		}
+
+		&__logo{
+			max-width: 160px;
+			padding: 20px 14px;
+		}
+
+		&__name{
+			font-size: 30px;
+			margin-bottom: 4px;
+		}
+
+		&__des{
+			font-size: 20px;
+		}
+
+		&__swiper.swiper{
+			display: contents;
+		}
+
+		&__swiper-wrapper.swiper-wrapper{
+			display: contents;
+		}
+
+		&__card{
+			padding: 60px;
+			flex-basis: calc(50% - 10px);
+			transition: transform 0.5s!important;
+		}
+
+		&__manage{
+			max-height: 420px;
+			display: flex;
+			flex-direction: column;
+			flex-basis: calc(50% - 10px);
+			padding: 60px;
+			border-radius: 30px;
+			background-color: #FFFFFF33;
+			box-shadow: 0px 0px 23.6px 0px #BABABA26;
+			backdrop-filter: blur(19px)
+		}
+
+		&__pagination{
+			display: none;
+
+			&_castom{
+				display: block;
+				margin-top: 0;
+
+				span{
+					margin: 0 6px;
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+		&__manage-row{
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+
+		&__text{
+			font-size: 30px;
+		}
+
+		&__decor{
+			position: absolute;
+			display: block;
+
+			&_1{
+				top: 16px;
+				left: -350px;
+				width: 466px;
+				rotate: -38deg;
+				z-index: 3;
+			}
+
+			&_2{
+				width: 710px;
+				bottom: -36px;
+				right: -440px;
+				rotate: 6deg;
+				z-index: 1;
+			}
+
+			&_3{
+				width: 710px;
+				z-index: 1;
+				rotate: -38deg;
+				filter: blur(43px);
+				top: -400px;
+				right: -140px;
+			}
+
+			&_4{
+				width: 710px;
+				z-index: 1;
+				rotate: -38deg;
+				filter: blur(43px);
+				bottom: -400px;
+				left: -400px;
+			}
+		}
+	}
+}
+
+@media(min-width: 1550px){
+	.smi{
+		&__container{
+			padding: 100px 150px;
+		}
+
+		&__decor{
+			position: absolute;
+
+			&_1{
+				top: 16px;
+				bottom: auto;
+				left: -250px;
+				width: 466px;
+				rotate: -38deg;
+				z-index: 3;
+			}
+
+			&_2{
+				width: 710px;
+				bottom: -36px;
+				right: -440px;
+				rotate: 6deg;
+				z-index: 3;
 			}
 		}
 	}

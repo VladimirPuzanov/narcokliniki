@@ -161,6 +161,10 @@ body {
 			opacity: 0.5;
 		}
 
+		path{
+			fill: #4A7AD4;
+		}
+
 		@media(hover : hover){
 			&:not(.swiper-button-disabled):hover{
 				background-color: #4A7AD4;
@@ -169,6 +173,14 @@ body {
 					filter: brightness(3);
 				}
 			}
+		}
+	}
+
+	&_white{
+		background-color: $bg-prim;
+		
+		path{
+			fill: $blue;
 		}
 	}
 
@@ -185,3 +197,4 @@ body {
 @import 'vendor/princ.scss';
 @import 'vendor/best-clinics.scss';
 @import 'vendor/smi.scss';
+@import 'vendor/articles.scss';
