@@ -1860,6 +1860,11 @@ body.lock {
   color: #2B3746;
   margin-bottom: 14px;
 }
+.articles__page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .articles__tags {
   display: flex;
   gap: 6px;
