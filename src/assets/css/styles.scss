@@ -189,6 +189,43 @@ body {
 	}
 }
 
+.breadcrambs{
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-bottom: 35px;
+
+	&__home{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg{
+			path{
+				fill: #2B3746;
+			}
+		}
+	}
+
+	&__link{
+		color: #2B3746CC;
+		padding: 2px 8px;
+		background-color: #8A8C9924;
+		border-radius: 6px;
+		font-size: 12px;
+		line-height: 16px;
+		display: block;
+	}
+
+	@media(min-width: 1024px){
+		margin-bottom: 100px;
+		&__link{
+			font-size: 14px;
+			line-height: 20px;
+			padding: 2px 12px;
+		}
+	}
+}
+
 @import 'vendor/header.scss';
 @import 'vendor/footer.scss';
 @import 'vendor/intro.scss';
@@ -198,3 +235,4 @@ body {
 @import 'vendor/best-clinics.scss';
 @import 'vendor/smi.scss';
 @import 'vendor/articles.scss';
+@import 'vendor/about.scss';

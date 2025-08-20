@@ -1,0 +1,29 @@
+.about-intro{
+	padding: 0 6px;
+
+	&__container{
+		background-color: #EBF3FE;
+		border-radius: 20px;
+		padding: 20px;
+		padding-bottom: 175px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__title{
+		color: $prim;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 14px;
+
+		span{
+			color: #6398FD;
+		}
+	}
+
+	&__subtitle{
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
