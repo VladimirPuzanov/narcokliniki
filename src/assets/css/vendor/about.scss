@@ -8,6 +8,8 @@
 		padding-bottom: 175px;
 		position: relative;
 		overflow: hidden;
+		max-width: 1880px;
+		margin: 0 auto;
 	}
 
 	&__title{
@@ -25,5 +27,150 @@
 	&__subtitle{
 		font-size: 16px;
 		line-height: 24px;
+		color: $prim;
+	}
+
+	&__decor{
+		position: absolute;
+
+		&_1{
+			width: 166px;
+			opacity: 0.7;
+			rotate: -38deg;
+			bottom: 0;
+			left: -70px;
+		}
+
+		&_2{
+			width: 295px;
+			opacity: 0.7;
+			rotate: 15deg;
+			bottom: -100px;
+			right: -120px;
+		}
+	}
+}
+
+@media(min-width: 1024px){
+	.about-intro{
+		margin-bottom: 120px;
+
+		&__container{
+			padding: 30px;
+			border-radius: 60px;
+			padding-bottom: 120px;
+
+			@media(min-width: 1300px){
+				padding: 30px 150px;
+				padding-bottom: 120px;
+			}
+		}
+
+		&__title{
+			font-size: 64px;
+			line-height: 68px;
+			text-align: center;
+			margin-bottom: 40px;
+			z-index: 2;
+			position: relative;
+		}
+
+		&__subtitle{
+			font-size: 20px;
+			line-height: 28px;
+			max-width: 950px;
+			margin: 0 auto;
+			text-align: center;
+			z-index: 2;
+			position: relative;
+		}
+
+		&__decor{
+			&_1{
+				width: 710px;
+				rotate: 15deg;
+				left: auto;
+				bottom: auto;
+				right: -440px;
+				top: -275px;
+			}
+
+			&_2{
+				rotate: -38deg;
+				right: auto;
+				top: auto;
+				left: -150px;
+				bottom: -150px;
+				width: 400px;
+			}
+		}
+	}
+}
+
+.about-princ{
+	padding: 50px 16px;
+
+	&__title{
+		color: $prim;
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 36px;
+		margin-bottom: 30px;
+	}
+
+	&__buttons{
+		display: none;
+	}
+
+	&__card{
+		padding: 20px;
+		border-radius: 20px;
+		background-color: $bg-sec;
+		position: relative;
+		padding-bottom: 250px;
+
+		&.swiper-slide{
+			height: auto;
+		}
+	}
+
+	&__name{
+		color: $prim;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 20px;
+	}
+
+	&__des{
+		font-size: 16px;
+		line-height: 24px;
+		color: $sec;
+	}
+
+	&__line{
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+
+		&_2{
+			left: -25px;
+			bottom: 15px;
+		}
+	}
+
+	&__pic{
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		left: 0;
+		bottom: 35px;
+
+		img{
+			max-width: 165px;
+			margin: 0 auto;
+		}
 	}
 }

@@ -1407,7 +1407,7 @@ body.lock {
     margin-bottom: 100px;
   }
   .princ__title {
-    max-width: 900px;
+    max-width: 980px;
     margin-bottom: 30px;
     font-size: 64px;
   }
@@ -2094,6 +2094,8 @@ body.lock {
   padding-bottom: 175px;
   position: relative;
   overflow: hidden;
+  max-width: 1880px;
+  margin: 0 auto;
 }
 .about-intro__title {
   color: #2B3746;
@@ -2108,4 +2110,131 @@ body.lock {
 .about-intro__subtitle {
   font-size: 16px;
   line-height: 24px;
+  color: #2B3746;
+}
+.about-intro__decor {
+  position: absolute;
+}
+.about-intro__decor_1 {
+  width: 166px;
+  opacity: 0.7;
+  rotate: -38deg;
+  bottom: 0;
+  left: -70px;
+}
+.about-intro__decor_2 {
+  width: 295px;
+  opacity: 0.7;
+  rotate: 15deg;
+  bottom: -100px;
+  right: -120px;
+}
+
+@media (min-width: 1024px) {
+  .about-intro {
+    margin-bottom: 120px;
+  }
+  .about-intro__container {
+    padding: 30px;
+    border-radius: 60px;
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1300px) {
+  .about-intro__container {
+    padding: 30px 150px;
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .about-intro__title {
+    font-size: 64px;
+    line-height: 68px;
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 2;
+    position: relative;
+  }
+  .about-intro__subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+  .about-intro__decor_1 {
+    width: 710px;
+    rotate: 15deg;
+    left: auto;
+    bottom: auto;
+    right: -440px;
+    top: -275px;
+  }
+  .about-intro__decor_2 {
+    rotate: -38deg;
+    right: auto;
+    top: auto;
+    left: -150px;
+    bottom: -150px;
+    width: 400px;
+  }
+}
+.about-princ {
+  padding: 50px 16px;
+}
+.about-princ__title {
+  color: #2B3746;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+.about-princ__buttons {
+  display: none;
+}
+.about-princ__card {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #F5F9FE;
+  position: relative;
+  padding-bottom: 250px;
+}
+.about-princ__card.swiper-slide {
+  height: auto;
+}
+.about-princ__name {
+  color: #2B3746;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.about-princ__des {
+  font-size: 16px;
+  line-height: 24px;
+  color: #8A8C99;
+}
+.about-princ__line {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.about-princ__line_2 {
+  left: -25px;
+  bottom: 15px;
+}
+.about-princ__pic {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  bottom: 35px;
+}
+.about-princ__pic img {
+  max-width: 165px;
+  margin: 0 auto;
 }

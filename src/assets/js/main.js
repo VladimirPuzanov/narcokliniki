@@ -324,3 +324,27 @@ articlesSwiper = new Swiper(document.querySelector('.articles__swiper'), {
 		},
 	}
 });
+
+aboutPrincSlider = new Swiper(document.querySelector('.about-princ__swiper'), {
+	direction: 'horizontal',
+	slidesPerView: 1.1,
+	grabCursor: true,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: document.querySelector(".about-princ__button_next"),
+		prevEl: document.querySelector(".about-princ__button_back")
+	},
+	pagination: {
+		el: ".about-princ__pagination"
+	},
+	breakpoints: {
+		650: {
+			slidesPerView: 2.3,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3.2,
+			spaceBetween: 30,
+		},
+	}
+});
