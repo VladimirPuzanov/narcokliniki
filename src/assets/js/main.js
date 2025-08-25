@@ -343,8 +343,8 @@ aboutPrincSlider = new Swiper(document.querySelector('.about-princ__swiper'), {
 			spaceBetween: 20,
 		},
 		1024: {
-			slidesPerView: 3.2,
-			spaceBetween: 30,
+			slidesPerView: 1.4,
+			spaceBetween: 20,
 		},
 	}
 });

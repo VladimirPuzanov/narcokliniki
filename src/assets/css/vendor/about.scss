@@ -128,6 +128,7 @@
 		background-color: $bg-sec;
 		position: relative;
 		padding-bottom: 250px;
+		overflow: hidden;
 
 		&.swiper-slide{
 			height: auto;
@@ -157,7 +158,7 @@
 
 		&_2{
 			left: -25px;
-			bottom: 15px;
+			bottom: 0px;
 		}
 	}
 
@@ -172,5 +173,25 @@
 			max-width: 165px;
 			margin: 0 auto;
 		}
+	}
+}
+
+@media(min-width: 1024px){
+	.about-princ{
+		&__card{
+			padding: 40px;
+			padding-bottom: 40px;
+			padding-right: 400px;
+		}
+	}
+
+	.about-princ__line{
+		left: auto;
+		bottom: auto;
+		width: auto;
+		rotate: -90deg;
+		top: -30px;
+		right: 0;
+		height: 120%;
 	}
 }

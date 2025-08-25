@@ -2200,6 +2200,7 @@ body.lock {
   background-color: #F5F9FE;
   position: relative;
   padding-bottom: 250px;
+  overflow: hidden;
 }
 .about-princ__card.swiper-slide {
   height: auto;
@@ -2225,7 +2226,7 @@ body.lock {
 }
 .about-princ__line_2 {
   left: -25px;
-  bottom: 15px;
+  bottom: 0px;
 }
 .about-princ__pic {
   position: absolute;
@@ -2237,4 +2238,21 @@ body.lock {
 .about-princ__pic img {
   max-width: 165px;
   margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .about-princ__card {
+    padding: 40px;
+    padding-bottom: 40px;
+    padding-right: 400px;
+  }
+  .about-princ__line {
+    left: auto;
+    bottom: auto;
+    width: auto;
+    rotate: -90deg;
+    top: -30px;
+    right: 0;
+    height: 120%;
+  }
 }
