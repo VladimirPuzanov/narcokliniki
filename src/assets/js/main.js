@@ -343,6 +343,10 @@ aboutPrincSlider = new Swiper(document.querySelector('.about-princ__swiper'), {
 			spaceBetween: 20,
 		},
 		1024: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		1250: {
 			slidesPerView: 1.4,
 			spaceBetween: 20,
 		},

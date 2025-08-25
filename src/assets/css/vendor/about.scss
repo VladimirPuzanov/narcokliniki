@@ -1,7 +1,7 @@
-.about-intro{
+.about-intro {
 	padding: 0 6px;
 
-	&__container{
+	&__container {
 		background-color: #EBF3FE;
 		border-radius: 20px;
 		padding: 20px;
@@ -12,28 +12,28 @@
 		margin: 0 auto;
 	}
 
-	&__title{
+	&__title {
 		color: $prim;
 		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
 		margin-bottom: 14px;
 
-		span{
+		span {
 			color: #6398FD;
 		}
 	}
 
-	&__subtitle{
+	&__subtitle {
 		font-size: 16px;
 		line-height: 24px;
 		color: $prim;
 	}
 
-	&__decor{
+	&__decor {
 		position: absolute;
 
-		&_1{
+		&_1 {
 			width: 166px;
 			opacity: 0.7;
 			rotate: -38deg;
@@ -41,7 +41,7 @@
 			left: -70px;
 		}
 
-		&_2{
+		&_2 {
 			width: 295px;
 			opacity: 0.7;
 			rotate: 15deg;
@@ -51,22 +51,22 @@
 	}
 }
 
-@media(min-width: 1024px){
-	.about-intro{
+@media(min-width: 1024px) {
+	.about-intro {
 		margin-bottom: 120px;
 
-		&__container{
+		&__container {
 			padding: 30px;
 			border-radius: 60px;
 			padding-bottom: 120px;
 
-			@media(min-width: 1300px){
+			@media(min-width: 1300px) {
 				padding: 30px 150px;
 				padding-bottom: 120px;
 			}
 		}
 
-		&__title{
+		&__title {
 			font-size: 64px;
 			line-height: 68px;
 			text-align: center;
@@ -75,7 +75,7 @@
 			position: relative;
 		}
 
-		&__subtitle{
+		&__subtitle {
 			font-size: 20px;
 			line-height: 28px;
 			max-width: 950px;
@@ -85,8 +85,8 @@
 			position: relative;
 		}
 
-		&__decor{
-			&_1{
+		&__decor {
+			&_1 {
 				width: 710px;
 				rotate: 15deg;
 				left: auto;
@@ -95,7 +95,7 @@
 				top: -275px;
 			}
 
-			&_2{
+			&_2 {
 				rotate: -38deg;
 				right: auto;
 				top: auto;
@@ -107,10 +107,12 @@
 	}
 }
 
-.about-princ{
+.about-princ {
+	max-width: 1580px;
+	margin: 0 auto;
 	padding: 50px 16px;
 
-	&__title{
+	&__title {
 		color: $prim;
 		font-weight: 600;
 		font-size: 30px;
@@ -118,11 +120,11 @@
 		margin-bottom: 30px;
 	}
 
-	&__buttons{
+	&__buttons {
 		display: none;
 	}
 
-	&__card{
+	&__card {
 		padding: 20px;
 		border-radius: 20px;
 		background-color: $bg-sec;
@@ -130,12 +132,12 @@
 		padding-bottom: 250px;
 		overflow: hidden;
 
-		&.swiper-slide{
+		&.swiper-slide {
 			height: auto;
 		}
 	}
 
-	&__name{
+	&__name {
 		color: $prim;
 		font-weight: 600;
 		font-size: 24px;
@@ -143,55 +145,126 @@
 		margin-bottom: 20px;
 	}
 
-	&__des{
+	&__des {
 		font-size: 16px;
 		line-height: 24px;
 		color: $sec;
 	}
 
-	&__line{
+	&__line {
 		position: absolute;
 		width: 100%;
 		bottom: 0;
 		left: 0;
 		z-index: 0;
 
-		&_2{
+		&_2 {
 			left: -25px;
 			bottom: 0px;
 		}
 	}
 
-	&__pic{
+	&__pic {
 		position: absolute;
 		z-index: 2;
 		width: 100%;
 		left: 0;
 		bottom: 35px;
 
-		img{
+		img {
 			max-width: 165px;
 			margin: 0 auto;
 		}
 	}
+
+	&__pagination{
+		text-align: center;
+		padding-top: 40px;
+
+		span.swiper-pagination-bullet{
+			width: 8px;
+			height: 8px;
+			margin: 0 3px;
+			background-color: $blue;
+			opacity: 0.4!important;
+
+			&-active{
+				opacity: 1!important;
+			}
+		}
+	}
 }
 
-@media(min-width: 1024px){
-	.about-princ{
-		&__card{
+@media(min-width: 1024px) {
+	.about-princ {
+		margin-bottom: 100px;
+
+		&__title-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 80px;
+		}
+
+		&__title {
+			font-size: 64px;
+			line-height: 68px;
+		}
+
+		&__buttons {
+			display: flex;
+		}
+
+		&__card {
 			padding: 40px;
 			padding-bottom: 40px;
 			padding-right: 400px;
-		}
-	}
 
-	.about-princ__line{
-		left: auto;
-		bottom: auto;
-		width: auto;
-		rotate: -90deg;
-		top: -30px;
-		right: 0;
-		height: 120%;
+			&.swiper-slide-next {
+				opacity: 0.5;
+			}
+		}
+
+		&__name {
+			font-size: 48px;
+			line-height: 54px;
+			margin-bottom: 110px;
+		}
+
+		&__des {
+			font-size: 18px;
+			line-height: 26px;
+		}
+
+		&__pic {
+			bottom: 0;
+			left: auto;
+			right: 0;
+			height: 100%;
+			padding: 55px;
+			width: auto;
+			max-height: 500px;
+
+			img {
+				max-width: 100%;
+				height: 100%;
+				width: auto;
+				margin: 0;
+			}
+		}
+
+		&__line {
+			left: auto;
+			bottom: auto;
+			width: auto;
+			rotate: -90deg;
+			top: -30px;
+			right: 0;
+			height: 120%;
+		}
+
+		&__pagination{
+			display: none;
+		}
 	}
 }
