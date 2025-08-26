@@ -240,12 +240,12 @@ class CastomSlider {
 		}
 	}
 
-	renderPagination(){
+	renderPagination() {
 		this.pagination.innerHTML = ""
-		for(let i = 1; i <= this.lastPage; i++){
+		for (let i = 1; i <= this.lastPage; i++) {
 			let element = document.createElement("span")
 			element.classList.add("swiper-pagination-bullet")
-			if(i == this.page){
+			if (i == this.page) {
 				element.classList.add("swiper-pagination-bullet-active")
 			}
 			this.pagination.append(element)
@@ -350,5 +350,30 @@ aboutPrincSlider = new Swiper(document.querySelector('.about-princ__swiper'), {
 			slidesPerView: 1.4,
 			spaceBetween: 20,
 		},
+	}
+});
+
+//Слайдер цифр
+aboutDigistSwiper = new Swiper(document.querySelector('.about-digits__swiper'), {
+	direction: 'horizontal',
+	initialSlide: 1,
+	slidesPerView: 1.1,
+	grabCursor: true,
+	centeredSlides: true,
+	spaceBetween: 10,
+	pagination: {
+		el: ".about-digits__pagination"
+	},
+	breakpoints: {
+		1024: {
+			direction: 'horizontal',
+			slidesPerView: 1.8,
+			spaceBetween: 25,
+		},
+		1420: {
+			slidesPerView: 2.4,
+			direction: "vertical",
+			spaceBetween: 25,
+		}
 	}
 });

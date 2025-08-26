@@ -630,6 +630,21 @@ body.lock {
   line-height: 16px;
   display: block;
 }
+.breadcrambs__separator {
+  opacity: 0.5;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(43, 55, 70, 0.5019607843);
+}
+.breadcrambs a.breadcrambs__link {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+@media (hover: hover) {
+  .breadcrambs a.breadcrambs__link:hover {
+    opacity: 1;
+  }
+}
 @media (min-width: 1024px) {
   .breadcrambs {
     margin-bottom: 100px;
@@ -2317,4 +2332,224 @@ body.lock {
   .about-princ__pagination {
     display: none;
   }
+}
+.about-digits {
+  padding: 50px 6px;
+}
+.about-digits__container {
+  border-radius: 30px;
+  background-color: #82ADFD;
+  padding-bottom: 20px;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+.about-digits__col {
+  padding: 30px 20px;
+  padding-bottom: 0;
+}
+.about-digits__title {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+.about-digits__des {
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.about-digits__swiper-wrapper {
+  margin-bottom: 50px;
+}
+.about-digits__card {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  padding: 40px;
+  position: relative;
+}
+.about-digits__card.swiper-slide-next, .about-digits__card.swiper-slide-prev {
+  opacity: 0.5;
+}
+.about-digits__card p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #6398FD;
+}
+.about-digits__card div {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+}
+.about-digits__card div span {
+  display: inline-block;
+  background-color: #FFFFFF;
+  padding: 8px 14px;
+  margin: 0 auto;
+  border-radius: 10px;
+  color: #5B5F62;
+  border: 2px solid #EBF3FE;
+}
+.about-digits__pagination {
+  text-align: center;
+}
+.about-digits__pagination .swiper-pagination-bullet {
+  background-color: #FFFFFF !important;
+  opacity: 0.4 !important;
+}
+.about-digits__pagination .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+@media (min-width: 1024px) {
+  .about-digits {
+    margin-bottom: 100px;
+  }
+  .about-digits__col {
+    padding: 80px 40px;
+    max-width: 1080px;
+  }
+  .about-digits__title {
+    font-size: 64px;
+    line-height: 68px;
+    margin-bottom: 40px;
+  }
+  .about-digits__des {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .about-digits__card {
+    padding: 73px;
+  }
+  .about-digits__card p {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+@media (min-width: 1420px) {
+  .about-digits__container {
+    display: flex;
+    max-height: 520px;
+    padding-bottom: 0;
+    padding-right: 40px;
+  }
+  .about-digits__col {
+    max-width: 850px;
+  }
+  .about-digits__card {
+    width: 100%;
+    max-width: 595px;
+  }
+  .about-digits__card.swiper-slide-next, .about-digits__card.swiper-slide-prev {
+    opacity: 0.5;
+    filter: blur(8px);
+    box-shadow: 0px 0px 23.6px 0px rgba(186, 186, 186, 0.1490196078);
+  }
+  .about-digits__swiper-wrapper {
+    width: 100%;
+    max-width: 595px;
+    margin: 0 auto;
+  }
+  .about-digits__swiper {
+    width: 100%;
+    max-width: 625px;
+  }
+  .about-digits__pagination.swiper-pagination-vertical.swiper-pagination-bullets {
+    transform: none;
+    margin: auto 0;
+  }
+  .about-digits__pagination.swiper-pagination-vertical.swiper-pagination-bullets span {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (min-width: 1750px) {
+  .about-digits__container {
+    padding-right: 75px;
+  }
+  .about-digits__col {
+    padding-left: 150px;
+    max-width: 950px;
+  }
+}
+.clinic {
+  padding: 20px 16px;
+}
+.clinic__logo-wrapper {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #EDEDEE;
+  box-shadow: 0px 0px 23px 0px rgba(186, 186, 186, 0.1490196078);
+  margin-bottom: 25px;
+}
+
+.clinic-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.clinic-intro__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  margin-bottom: 3px;
+  order: 1;
+}
+.clinic-intro__title span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto 0;
+  background-color: #6398FD;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+.clinic-intro__title span svg {
+  max-width: 10px;
+}
+.clinic-intro__subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: #8A8C99;
+  margin-bottom: 10px;
+  order: 2;
+}
+.clinic-intro__col {
+  display: contents;
+}
+.clinic-intro__reviews {
+  order: 3;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.clinic-intro__address {
+  order: 4;
+  margin-bottom: 10px;
+  color: rgba(43, 55, 70, 0.8);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.clinic-intro__open-map {
+  color: #6398FD;
+}
+
+.breadcrambs_clinic {
+  margin-bottom: 30px;
 }

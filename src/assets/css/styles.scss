@@ -6,22 +6,23 @@
 
 @import 'vendor/animations.scss';
 
-html{
+html {
 	scrollbar-gutter: stable;
 }
 
 body {
 	font-family: "Inter";
 
-	&.lock{
+	&.lock {
 		overflow: hidden;
 	}
 }
 
-.page{
+.page {
 	overflow: hidden;
 	padding-top: 82px;
-	@media(min-width: 1024px){
+
+	@media(min-width: 1024px) {
 		padding-top: 109px;
 	}
 }
@@ -105,7 +106,7 @@ body {
 			top: 10px;
 			left: 15px;
 			background-color: $blue;
-			transition:transform 0.3s;
+			transition: transform 0.3s;
 		}
 	}
 
@@ -116,30 +117,31 @@ body {
 	}
 
 	@media(hover:hover) {
-		&:hover{
+		&:hover {
 			background-color: #82ADFD4D;
 
-			.primary-button__plus::before{
+			.primary-button__plus::before {
 				transform: rotate(90deg);
 			}
 		}
 	}
 
-	@media(max-width: 1023px){
+	@media(max-width: 1023px) {
 		padding: 14px;
 		border-radius: 10px;
-		&__text{
+
+		&__text {
 			font-size: 16px;
 		}
 	}
 }
 
-.nav-buttons{
+.nav-buttons {
 	display: flex;
 	gap: 10px;
 }
 
-.nav-button{
+.nav-button {
 	width: 70px;
 	height: 70px;
 	display: flex;
@@ -148,65 +150,66 @@ body {
 	border-radius: 50%;
 	transition: 0.3s;
 
-	svg{
+	svg {
 		max-height: 30px;
 		filter: brightness(1);
 		transition: 0.3s;
 	}
 
-	&_blue{
+	&_blue {
 		background-color: #D0E0FE66;
 
-		&.swiper-button-disabled{
+		&.swiper-button-disabled {
 			opacity: 0.5;
 		}
 
-		path{
+		path {
 			fill: #4A7AD4;
 		}
 
-		@media(hover : hover){
-			&:not(.swiper-button-disabled):hover{
+		@media(hover : hover) {
+			&:not(.swiper-button-disabled):hover {
 				background-color: #4A7AD4;
 
-				svg{
+				svg {
 					filter: brightness(3);
 				}
 			}
 		}
 	}
 
-	&_white{
+	&_white {
 		background-color: $bg-prim;
-		
-		path{
+
+		path {
 			fill: $blue;
 		}
 	}
 
-	&_back{
+	&_back {
 		transform: rotate(180deg);
 	}
 }
 
-.breadcrambs{
+.breadcrambs {
 	display: flex;
 	gap: 8px;
 	align-items: center;
 	margin-bottom: 35px;
 
-	&__home{
+	&__home {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		svg{
-			path{
+
+		svg {
+			path {
 				fill: #2B3746;
 			}
 		}
 	}
 
-	&__link{
+	&__link {
 		color: #2B3746CC;
 		padding: 2px 8px;
 		background-color: #8A8C9924;
@@ -216,9 +219,28 @@ body {
 		display: block;
 	}
 
-	@media(min-width: 1024px){
+	&__separator{
+		opacity: 0.5;
+		font-size: 12px;
+		line-height: 16px;
+		color: #2B374680;
+	}
+
+	a.breadcrambs__link {
+		opacity: 0.5;
+		transition: opacity 0.3s;
+
+		@media(hover : hover) {
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	@media(min-width: 1024px) {
 		margin-bottom: 100px;
-		&__link{
+
+		&__link {
 			font-size: 14px;
 			line-height: 20px;
 			padding: 2px 12px;
@@ -236,3 +258,4 @@ body {
 @import 'vendor/smi.scss';
 @import 'vendor/articles.scss';
 @import 'vendor/about.scss';
+@import 'vendor/clinic.scss';
