@@ -2482,23 +2482,29 @@ body.lock {
   }
 }
 .clinic {
+  max-width: 1580px;
+  margin: 0 auto;
   padding: 20px 16px;
 }
 .clinic__logo-wrapper {
   aspect-ratio: 1;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   border-radius: 20px;
   border: 1px solid #EDEDEE;
   box-shadow: 0px 0px 23px 0px rgba(186, 186, 186, 0.1490196078);
+  margin: 0 auto;
   margin-bottom: 25px;
+  max-width: 320px;
 }
 
 .clinic-intro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-bottom: 50px;
 }
 .clinic-intro__title {
   font-weight: 500;
@@ -2546,10 +2552,24 @@ body.lock {
   line-height: 24px;
   font-weight: 500;
 }
+.clinic-intro__tel {
+  order: 6;
+  margin-bottom: 10px;
+  color: #6398FD;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  transition: opacity 0.5s;
+}
+@media (hover: hover) {
+  .clinic-intro__tel:hover {
+    opacity: 0.5;
+  }
+}
 .clinic-intro__open-map {
   order: 5;
   color: #6398FD;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 26px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -2563,9 +2583,48 @@ body.lock {
   }
 }
 .clinic-intro__schedule-wrapper {
-  order: 6;
+  order: 7;
   position: relative;
   width: 100%;
+  padding-bottom: 16px;
+  margin-bottom: 10px;
+}
+.clinic-intro__schedule-wrapper.active .clinic-intro__work-today {
+  opacity: 0.4;
+}
+.clinic-intro__schedule-wrapper.active .clinic-intro__work-today::after {
+  rotate: 135deg;
+  margin-bottom: 0;
+  margin-top: 3px;
+  opacity: 0.4;
+}
+.clinic-intro__schedule-wrapper.active .clinic-intro__schedule {
+  opacity: 1;
+  pointer-events: all;
+}
+.clinic-intro__work-today {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.clinic-intro__work-today p {
+  color: rgba(43, 55, 70, 0.8);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+.clinic-intro__work-today::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #2B3746;
+  border-left: 2px solid #2B3746;
+  rotate: -45deg;
+  margin-bottom: 3px;
+  transition: 0.3s;
 }
 .clinic-intro__schedule {
   position: absolute;
@@ -2579,12 +2638,193 @@ body.lock {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  top: 100%;
+  left: 0%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
 }
 .clinic-intro__day {
   display: flex;
   justify-content: space-between;
 }
+.clinic-intro__day-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(43, 55, 70, 0.8);
+}
+.clinic-intro__day-time {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(43, 55, 70, 0.8);
+}
+.clinic-intro__buttons {
+  order: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.clinic-intro__button {
+  display: block;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: background-color 0.5s;
+}
+.clinic-intro__button div {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+.clinic-intro__button div svg {
+  max-width: 12.5px;
+}
+.clinic-intro__button_blue {
+  color: #FFFFFF;
+  background-color: #6398FD;
+}
+@media (hover: hover) {
+  .clinic-intro__button_blue:hover {
+    background-color: #4F7ACA;
+  }
+}
+.clinic-intro__button_gray {
+  background-color: #EBF3FE;
+  color: #6398FD;
+}
+@media (hover: hover) {
+  .clinic-intro__button_gray:hover {
+    background-color: #CCDEFE;
+  }
+}
+.clinic-intro__pluses {
+  display: none;
+}
 
 .breadcrambs_clinic {
   margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .clinic__inner {
+    display: flex;
+    gap: 60px;
+  }
+  .clinic__col_logo {
+    max-width: 500px;
+    width: 100%;
+  }
+  .clinic__col_content {
+    width: 100%;
+  }
+  .clinic__logo-wrapper {
+    aspect-ratio: 10/7;
+    max-width: 100%;
+  }
+  .clinic-intro {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1400px) {
+  .clinic-intro {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .clinic-intro__title {
+    font-size: 36px;
+    line-height: 42px;
+    color: #2B3746;
+    margin-bottom: 6px;
+  }
+  .clinic-intro__title span {
+    width: 34px;
+    height: 34px;
+  }
+  .clinic-intro__title span svg {
+    max-width: 17px;
+    width: 100%;
+  }
+  .clinic-intro__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  .clinic-intro__address {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+  .clinic-intro__tel {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+  .clinic-intro__col {
+    display: flex;
+    flex-direction: column;
+  }
+  .clinic-intro__col:first-child {
+    width: 100%;
+    max-width: 600px;
+  }
+  .clinic-intro__schedule-wrapper {
+    margin-bottom: 20px;
+  }
+  .clinic-intro__buttons {
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 32px;
+  }
+  .clinic-intro__button {
+    font-size: 16px;
+    padding: 12px;
+    gap: 14px;
+  }
+  .clinic-intro__button div {
+    width: 35px;
+    height: 35px;
+  }
+  .clinic-intro__button div svg {
+    max-width: 17px;
+    width: 100%;
+  }
+  .clinic-intro__pluses {
+    display: flex;
+    order: 8;
+    gap: 24px;
+  }
+  .clinic-intro__pluses span {
+    color: rgba(43, 55, 70, 0.8);
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .clinic-intro__pluses span::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #EBF3FE;
+    background-image: url("../img/clinic/ok.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

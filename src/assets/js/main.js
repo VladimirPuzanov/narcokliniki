@@ -102,6 +102,13 @@ if (animatedItems.length > 0) {
 	})
 }
 
+schedule = document.querySelector(".clinic-intro__schedule-wrapper")
+if(schedule){
+	schedule.addEventListener("click", () => {
+		schedule.classList.toggle("active")
+	})
+}
+
 //Слайдер с целями
 advantagesSwiper = new Swiper(document.querySelector('.target__swiper'), {
 	direction: 'horizontal',
