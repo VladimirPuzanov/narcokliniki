@@ -1,5 +1,7 @@
 .footer {
 	padding: 10px 6px;
+	position: relative;
+	z-index: 2;
 
 	&__container {
 		background-color: $bg-ter;

@@ -78,7 +78,7 @@
 		font-weight: 500;
 	}
 
-	&__tel{
+	&__tel {
 		order: 6;
 		margin-bottom: 10px;
 		color: $blue-color;
@@ -115,6 +115,7 @@
 	&__schedule-wrapper {
 		order: 7;
 		position: relative;
+		z-index: 10;
 		width: 100%;
 		padding-bottom: 16px;
 		margin-bottom: 10px;
@@ -171,7 +172,7 @@
 		border-radius: 20px;
 		box-shadow: 0px 0px 23.6px 0px #BABABA26;
 		background-color: $bg-prim;
-		z-index: 1;
+		z-index: 3;
 		width: 100%;
 		max-width: 400px;
 		display: flex;
@@ -237,28 +238,30 @@
 			}
 		}
 
-		&_blue{
+		&_blue {
 			color: $bg-prim;
 			background-color: $blue-color;
-			@media(hover : hover){
-				&:hover{
-					background-color: #4F7ACA; 
+
+			@media(hover : hover) {
+				&:hover {
+					background-color: #4F7ACA;
 				}
 			}
 		}
 
-		&_gray{
+		&_gray {
 			background-color: $bg-ter;
 			color: $blue-color;
-			@media(hover : hover){
-				&:hover{
-					background-color: #CCDEFE; 
+
+			@media(hover : hover) {
+				&:hover {
+					background-color: #CCDEFE;
 				}
 			}
 		}
 	}
 
-	&__pluses{
+	&__pluses {
 		display: none;
 	}
 }
@@ -267,115 +270,121 @@
 	margin-bottom: 30px;
 }
 
-@media(min-width: 1024px){
-	.clinic{
-		&__inner{
+@media(min-width: 1024px) {
+	.clinic {
+		&__inner {
 			display: flex;
 			gap: 60px;
 		}
 
-		&__col{
-			&_logo{
+		&__col {
+			&_logo {
 				max-width: 500px;
 				width: 100%;
+				flex-shrink: 0;
 			}
 
-			&_content{
+			&_content {
 				width: 100%;
 			}
 		}
 
-		&__logo-wrapper{
+		&__logo-wrapper {
 			aspect-ratio: 10/7;
 			max-width: 100%;
+			position: fixed;
+			width: 500px;
+			top: 174px
 		}
 	}
 
-	.clinic-intro{
+	.clinic-intro {
+		padding-top: 54px;
 		flex-direction: column;
 		gap: 20px;
 		justify-content: space-between;
 
-		@media(min-width: 1400px){
+		@media(min-width: 1400px) {
 			flex-direction: row;
 		}
-		&__title{
+
+		&__title {
 			font-size: 36px;
 			line-height: 42px;
 			color: $prim;
 			margin-bottom: 6px;
 
-			span{
+			span {
 				width: 34px;
 				height: 34px;
 
-				svg{
+				svg {
 					max-width: 17px;
 					width: 100%;
 				}
 			}
 		}
 
-		&__subtitle{
+		&__subtitle {
 			font-size: 18px;
 			line-height: 26px;
 			margin-bottom: 20px;
 		}
 
-		&__address{
+		&__address {
 			font-size: 20px;
 			line-height: 28px;
 			margin-bottom: 10px;
 		}
 
-		&__tel{
+		&__tel {
 			font-size: 20px;
 			line-height: 28px;
 			margin-bottom: 10px;
 		}
-		
-		&__col{
+
+		&__col {
 			display: flex;
 			flex-direction: column;
 
-			&:first-child{
+			&:first-child {
 				width: 100%;
 				max-width: 600px;
 			}
 		}
 
-		&__schedule-wrapper{
+		&__schedule-wrapper {
 			margin-bottom: 20px;
 		}
 
-		&__buttons{
+		&__buttons {
 			flex-direction: row;
 			gap: 15px;
 			margin-bottom: 32px;
 		}
 
-		&__button{
+		&__button {
 			font-size: 16px;
 			padding: 12px;
 			gap: 14px;
 
-			div{
+			div {
 				width: 35px;
 				height: 35px;
 
-				svg{
+				svg {
 					max-width: 17px;
 					width: 100%;
 				}
 			}
 		}
 
-		&__pluses{
+		&__pluses {
 			display: flex;
 			order: 8;
 			gap: 24px;
 
-			span{
+			span {
 				color: #2B3746CC;
 				font-size: 16px;
 				line-height: 24px;
@@ -383,7 +392,7 @@
 				align-items: center;
 				gap: 6px;
 
-				&::before{
+				&::before {
 					content: "";
 					display: block;
 					width: 24px;
@@ -394,7 +403,132 @@
 					background-repeat: no-repeat;
 					background-position: center
 				}
-			};
+			}
+
+			;
 		}
+	}
+
+	.breadcrambs_clinic {
+		position: fixed;
+	}
+}
+
+.clinic__tabs {
+	padding: 30px 16px 50px;
+}
+
+.ctabs {
+	&__mini{
+		margin-bottom: 30px;
+	}
+
+	&__tab {
+		cursor: pointer;
+		&.swiper-slide {
+			width: auto;
+			display: flex;
+			border-bottom: 4px solid $bg-ter;
+			gap: 7px;
+			padding: 0 30px;
+			padding-bottom: 20px;
+
+			p {
+				font-size: 18px;
+				line-height: 26px;
+				color: #2B374680;
+				font-weight: 600;
+			}
+
+			span {
+				padding: 3px 8px;
+				color: $blue-color;
+				border-radius: 4px;
+				background-color: $light-blue;
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 700;
+			}
+		}
+		&.swiper-slide-thumb-active{
+			border-bottom: 4px solid $blue;
+			p {
+				color: $prim;
+			}
+		}
+	}
+}
+
+.c-text{
+	margin-bottom: 60px;
+}
+
+.c-license{
+	border: 1px solid #EDEDEE;
+	border-radius: 20px;
+	padding: 20px;
+
+	&__col{
+		&_info{
+			padding-bottom: 30px;
+			border-bottom: 1px solid #EDEDEE;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title{
+		color: #2B3746CC;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 700;
+		margin-bottom: 8px;
+
+		&_social{
+			margin-bottom: 20px;
+		}
+
+		&_license{
+			font-size: 18px;
+			line-height: 26px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__info{
+		color: #2B374680;
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 24px;
+	}
+
+	&__socials{
+		display: flex;
+		gap: 10px;
+	}
+
+	&__social{
+		width: 50px;
+		height: 50px;
+		background-color: $bg-ter;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		transition: opacity 0.3s;
+
+		svg{
+			max-width: 22px;
+			width: 100%;
+		}
+
+		@media(hover : hover){
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+	}
+
+	&__buttons{
+		display: none;
 	}
 }

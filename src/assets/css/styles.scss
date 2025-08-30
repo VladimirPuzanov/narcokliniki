@@ -219,7 +219,7 @@ body {
 		display: block;
 	}
 
-	&__separator{
+	&__separator {
 		opacity: 0.5;
 		font-size: 12px;
 		line-height: 16px;
@@ -259,3 +259,68 @@ body {
 @import 'vendor/articles.scss';
 @import 'vendor/about.scss';
 @import 'vendor/clinic.scss';
+
+.text-block {
+	font-size: 16px;
+	line-height: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #2B374680;
+
+	p {
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+
+	a{
+		text-decoration: underline;
+		color: $blue-color;
+		transition: color 0.3s;
+
+		@media(hover : hover){
+			&:hover{
+				color: $orange;
+			}
+		}
+	}
+
+	ol {
+		padding-left: 35px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		li {
+			list-style-position: outside;
+			&:not(:last-child) {
+				margin-bottom: 14px;
+			}
+
+			&::marker {
+				color: $blue-color;
+				font-weight: 700;
+			}
+		}
+	}
+
+	ul{
+		padding-left: 25px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+			li {
+				list-style: disc;
+
+				&::marker{
+					color: $blue;
+					font-size: 18px;
+				}
+
+			&:not(:last-child) {
+				margin-bottom: 14px;
+			}
+		}
+	}
+}

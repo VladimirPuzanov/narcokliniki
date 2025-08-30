@@ -103,7 +103,7 @@ if (animatedItems.length > 0) {
 }
 
 schedule = document.querySelector(".clinic-intro__schedule-wrapper")
-if(schedule){
+if (schedule) {
 	schedule.addEventListener("click", () => {
 		schedule.classList.toggle("active")
 	})
@@ -384,3 +384,16 @@ aboutDigistSwiper = new Swiper(document.querySelector('.about-digits__swiper'), 
 		}
 	}
 });
+
+ctabsTabSwiper = new Swiper(document.querySelector(".ctabs__mini"), {
+	spaceBetween: 0,
+	slidesPerView: "auto",
+	freeMode: true,
+})
+
+ctabsContentSwiper = new Swiper(document.querySelector(".ctabs__content"), {
+	thumbs: {
+		swiper: ctabsTabSwiper,
+		autoHeight: true,
+	},
+})
