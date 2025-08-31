@@ -396,4 +396,28 @@ ctabsContentSwiper = new Swiper(document.querySelector(".ctabs__content"), {
 		swiper: ctabsTabSwiper,
 		autoHeight: true,
 	},
+	allowTouchMove: false,
+	autoHeight: true,
+})
+
+cLicense = new Swiper(document.querySelector(".c-license__col_license.swiper"), {
+	spaceBetween: 15,
+	slidesPerView: 1.1,
+	pagination: {
+		el: ".c-license__pagination"
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 2,
+			spaceBetween: 25,
+		},
+	}
+})
+
+cPhoto = new Swiper(document.querySelector(".ctabs-photo__swiper"), {
+	spaceBetween: 10,
+	slidesPerView: 1.1,
+	pagination: {
+		el: ".ctabs-photo__pagination"
+	},
 })
