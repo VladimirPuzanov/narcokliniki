@@ -2733,6 +2733,8 @@ body.lock {
     max-width: 500px;
     width: 100%;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
   }
   .clinic__col_content {
     max-width: calc(100% - 560px);
@@ -2741,6 +2743,14 @@ body.lock {
     aspect-ratio: 10/7;
     max-width: 100%;
     width: 500px;
+    margin-bottom: 50px;
+  }
+  .clinic__logo-wrapper.top-fixed {
+    position: fixed;
+    top: 120px;
+  }
+  .clinic__logo-wrapper.bottom-fixed {
+    margin-top: auto;
   }
   .clinic-intro {
     flex-direction: column;
@@ -2903,7 +2913,7 @@ body.lock {
   border-radius: 20px;
   padding: 20px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1380px) {
   .c-license {
     display: flex;
     flex-direction: row;
@@ -2959,6 +2969,13 @@ body.lock {
   line-height: 26px;
   margin-bottom: 20px;
 }
+@media (min-width: 1024px) {
+  .c-license__title_license {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
 .c-license__info {
   color: rgba(43, 55, 70, 0.5019607843);
   font-size: 16px;
@@ -2998,6 +3015,15 @@ body.lock {
 .c-license__buttons {
   display: none;
 }
+@media (min-width: 1024px) {
+  .c-license__buttons .nav-button {
+    width: 50px;
+    height: 50px;
+  }
+  .c-license__buttons .nav-button svg {
+    max-width: 10px;
+  }
+}
 
 .c-category {
   padding: 20px;
@@ -3032,6 +3058,52 @@ body.lock {
 }
 .c-category__text span {
   display: block;
+}
+.c-category__text span:not(:last-child)::after {
+  content: ",";
+}
+@media (min-width: 1024px) {
+  .c-category__title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 250px;
+  }
+  .c-category__item {
+    border-radius: 30px;
+    padding: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .c-category__content-wrapper {
+    display: contents;
+  }
+  .c-category__text {
+    width: 100%;
+    max-width: 350px;
+    margin-right: auto;
+  }
+  .c-category__text span {
+    display: inline;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .c-category__icon-wrapper {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    order: 3;
+    flex-shrink: 0;
+  }
+  .c-category__icon-wrapper picture {
+    width: 100%;
+    height: 100%;
+  }
+  .c-category__icon-wrapper picture img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .ctabs-review__title {
@@ -3087,6 +3159,26 @@ body.lock {
 .ctabs-review__button {
   padding: 17px;
 }
+@media (min-width: 1024px) {
+  .ctabs-review__title {
+    font-size: 34px;
+    line-height: 140%;
+    margin-bottom: 60px;
+  }
+  .ctabs-review__name-row {
+    margin-bottom: 20px;
+  }
+  .ctabs-review__name {
+    max-width: 100%;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .ctabs-review__text {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+}
 
 .ctabs-service__title {
   font-weight: 700;
@@ -3109,7 +3201,7 @@ body.lock {
 }
 .ctabs-service__table tr td {
   font-weight: 500;
-  font-style: 16px;
+  font-size: 16px;
   line-height: 24px;
 }
 .ctabs-service__table tr td:first-child {
@@ -3118,6 +3210,19 @@ body.lock {
 .ctabs-service__table tr td:last-child {
   color: #6398FD;
 }
+@media (min-width: 1024px) {
+  .ctabs-service__table tr td {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  .ctabs-service__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 60px;
+  }
+}
 
 .ctabs-photo__title {
   font-size: 24px;
@@ -3125,20 +3230,9 @@ body.lock {
   font-weight: 700;
   margin-bottom: 30px;
 }
-.ctabs-photo__pagination {
-  margin-top: 40px;
-  text-align: center;
-}
-.ctabs-photo__pagination .swiper-pagination-bullet {
-  margin: 0 3px !important;
-  width: 8px !important;
-  height: 8px !important;
-  background-color: #6398FD !important;
-  opacity: 0.4 !important;
-}
-.ctabs-photo__pagination .swiper-pagination-bullet-active {
-  background-color: #6398FD !important;
-  opacity: 1 !important;
+.ctabs-photo__button {
+  display: block;
+  max-width: 250px;
 }
 .ctabs-photo__item picture {
   aspect-ratio: 26/21;
@@ -3151,8 +3245,36 @@ body.lock {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.ctabs-photo__button {
-  display: none;
+.ctabs-photo__swiper {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+@media (min-width: 1024px) {
+  .ctabs-photo__swiper {
+    margin-bottom: 60px;
+  }
+}
+.ctabs-photo__item {
+  flex-basis: 100%;
+}
+@media (min-width: 600px) {
+  .ctabs-photo__item {
+    flex-basis: calc(50% - 5px);
+  }
+}
+@media (min-width: 1320px) {
+  .ctabs-photo__item {
+    flex-basis: calc(33% - 7px);
+  }
+}
+@media (min-width: 1024px) {
+  .ctabs-photo__title {
+    font-size: 34px;
+    line-height: 140%;
+    margin-bottom: 60px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -3170,6 +3292,91 @@ body.lock {
     margin-bottom: 30px;
   }
 }
+.popup {
+  height: 100vh;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 100%;
+  z-index: 2000;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+  background: rgba(0, 8, 84, 0.27);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  display: none;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup__body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 15px 20px;
+}
+
+.popup.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup__content {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #F1F2F9;
+  position: relative;
+  scale: 0.3;
+  transition: scale 0.4s ease;
+  box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.1);
+}
+
+.popup.open .popup__content {
+  scale: 1;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #F1F2F9;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close-popup svg {
+  width: 16px;
+  fill: #3C3C43;
+  transition: 0.3s;
+}
+
+@media (hover: hover) {
+  .close-popup:hover {
+    background-color: rgba(60, 60, 67, 0.4392156863);
+  }
+  .close-popup:hover svg {
+    fill: #FFF;
+  }
+}
+.map-popup .popup__content {
+  height: 80vh;
+  width: 90vw;
+  position: relative;
+  padding: 10px;
+}
+
 .text-block {
   font-size: 16px;
   line-height: 24px;
