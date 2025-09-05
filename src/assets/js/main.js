@@ -14,6 +14,9 @@ function unlockBody() {
 //Флаг фиксации тела
 let bodyIsLock = false
 
+//Карта яндекса
+let mapObj = false
+
 //Управление бургерами(Звучит как новое место работы Якова)
 const burger = document.querySelector(".header__burger")
 const headerMenu = document.querySelector(".header__menu")
@@ -62,7 +65,7 @@ const observer = new IntersectionObserver((entries) => {
 		if (entry.isIntersecting && window.innerWidth > width) {
 			if (entry.target.classList.contains("counter")) {
 				stop = parseInt(entry.target.innerText.replaceAll(" ", ""))
-				counterAnimate(entry.target, 0, stop, 200)
+				counterAnimate(entry.target, 0, stop, 250)
 			}
 			if (entry.target.classList.contains("animation-group")) {
 				animationDelay = animationDelay + 100
@@ -420,41 +423,41 @@ cLicense = new Swiper(document.querySelector(".c-license__col_license.swiper"), 
 })
 
 function toggleClassOnScroll(element, topFixed) {
-    const parent = element.parentElement;
-		let bottomLine = 0
-		let isTopFixed = false
-		let isBottomFixed = false
+	const parent = element.parentElement;
+	let bottomLine = 0
+	let isTopFixed = false
+	let isBottomFixed = false
 
-    function checkPosition() {
-			const elementRect = element.getBoundingClientRect()
-			const parentRect = parent.getBoundingClientRect()
-			if (elementRect.top <= parentRect.top && isTopFixed) {
-					element.classList.remove("top-fixed")
-					isTopFixed = false
-			}
-			if (elementRect.top <= topFixed && !isTopFixed && !isBottomFixed) {
-					element.classList.add("top-fixed")
-					isTopFixed = true
-			}
-			if(elementRect.bottom >= parentRect.bottom){
-					element.classList.remove("top-fixed")
-					element.classList.add("bottom-fixed")
-					isTopFixed = false
-					isBottomFixed = true
-					bottomLine = parentRect.bottom
-			}
-			if(isBottomFixed && bottomLine < parentRect.bottom){
-					element.classList.remove("bottom-fixed")
-					isBottomFixed = false
-			}
-    }
+	function checkPosition() {
+		const elementRect = element.getBoundingClientRect()
+		const parentRect = parent.getBoundingClientRect()
+		if (elementRect.top <= parentRect.top && isTopFixed) {
+			element.classList.remove("top-fixed")
+			isTopFixed = false
+		}
+		if (elementRect.top <= topFixed && !isTopFixed && !isBottomFixed) {
+			element.classList.add("top-fixed")
+			isTopFixed = true
+		}
+		if (elementRect.bottom >= parentRect.bottom) {
+			element.classList.remove("top-fixed")
+			element.classList.add("bottom-fixed")
+			isTopFixed = false
+			isBottomFixed = true
+			bottomLine = parentRect.bottom
+		}
+		if (isBottomFixed && bottomLine < parentRect.bottom) {
+			element.classList.remove("bottom-fixed")
+			isBottomFixed = false
+		}
+	}
 
-    window.addEventListener('scroll', checkPosition);
-    checkPosition();
+	window.addEventListener('scroll', checkPosition);
+	checkPosition();
 }
 
 const fixedCol = document.querySelector(".fixed-col")
-if(fixedCol){
+if (fixedCol) {
 	toggleClassOnScroll(fixedCol, 120)
 }
 
@@ -464,10 +467,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		setTimeout(() => {
 			popupActive.classList.contains("open") || popupActive.classList.remove("active");
 		}, 400);
-		document.body.classList.remove('lock');
-		document.querySelector('html').style.paddingRight = 0;
-		document.querySelector('html').classList.remove('lock');
-		document.querySelector('header').removeAttribute('style');
+		if (mapObj) {
+			mapObj.destroy()
+			mapObj = false
+		}
+		unlockBody()
 	}
 	const popupOpenBtns = document.querySelectorAll('.popup-btn');
 	const popups = document.querySelectorAll('.popup');
@@ -482,22 +486,27 @@ document.addEventListener("DOMContentLoaded", function () {
 			popupClose(popup);
 			popup.addEventListener('click', function (e) {
 				if (!e.target.closest('.popup__content')) {
-
 					popupClose(e.target.closest('.popup'));
 				}
 			});
 		});
 	}
 	popupOpenBtns.forEach(function (el) {
+		let coords
 		el.addEventListener('click', function (e) {
 			e.preventDefault();
 			const path = e.currentTarget.dataset.path;
+			if(path == "popup-map"){
+				coords = e.currentTarget.dataset.coords
+				coords = coords.split(",")
+			}
 			const currentPopup = document.querySelector(`[data-target="${path}"]`);
 			if (currentPopup) {
 				currentPopup.classList.add('active');
 				setTimeout(() => {
 					currentPopup.classList.add("open");
 				}, 10);
+
 				if (currentPopup.getAttribute("data-target") == 'popup-change') {
 					let currentItem = el.closest('.change-item');
 					let originalTop = currentPopup.querySelector('.original-title');
@@ -515,9 +524,46 @@ document.addEventListener("DOMContentLoaded", function () {
 					}
 					originalTop.innerHTML = newTitle;
 				};
-				// scrollWidthFunc();
-				document.querySelector('html').classList.add('lock');
+				if (currentPopup.getAttribute("data-target") == 'popup-map') {
+					loadMap(coords)
+				}
+				lockBody()
 			}
 		});
 	});
 });
+
+/* yandex map */
+const map = document.querySelectorAll('#map');
+function loadMap(coords) {
+	if (!document.querySelector('[src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"]')) {
+		const script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+		script.onload = function() {
+            initMap(coords);
+        };;
+		document.head.appendChild(script);
+	} else {
+		initMap(coords);
+	}
+}
+function initMap(coords) {
+	ymaps.ready(function () {
+		const myMap = new ymaps.Map('map', {
+			center: coords,
+			zoom: 16,
+			controls: []
+		});
+		const myPlacemark = new ymaps.Placemark(
+			coords,
+			{
+				hintContent: '',
+				balloonContent: ''
+			},
+		);
+		myMap.geoObjects.add(myPlacemark);
+		myMap.behaviors.disable(['scrollZoom']);
+		mapObj = myMap
+	});
+}

@@ -194,6 +194,7 @@ body {
 .breadcrambs {
 	display: flex;
 	gap: 8px;
+	flex-wrap: wrap;
 	align-items: center;
 	margin-bottom: 35px;
 
