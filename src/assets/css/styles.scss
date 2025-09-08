@@ -269,7 +269,34 @@ body {
 	line-height: 24px;
 	color: #2B374680;
 
-	b{
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 30px;
+		line-height: 36px;
+		color: #2B3746;
+
+	}
+
+	@for $i from 1 through 6 {
+		h#{$i}:not(:first-child) {
+			margin-top: 60px;
+		}
+
+		h#{$i}:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	img {
+		border-radius: 30px;
+		overflow: hidden;
+	}
+
+	b {
 		font-weight: 700;
 	}
 
@@ -279,13 +306,13 @@ body {
 		}
 	}
 
-	a{
+	a {
 		text-decoration: underline;
 		color: $blue-color;
 		transition: color 0.3s;
 
-		@media(hover : hover){
-			&:hover{
+		@media(hover : hover) {
+			&:hover {
 				color: $orange;
 			}
 		}
@@ -293,12 +320,14 @@ body {
 
 	ol {
 		padding-left: 35px;
+
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
 
 		li {
 			list-style-position: outside;
+
 			&:not(:last-child) {
 				margin-bottom: 14px;
 			}
@@ -310,30 +339,97 @@ body {
 		}
 	}
 
-	ul{
+	ul {
 		padding-left: 25px;
+
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
 
-			li {
-				list-style: disc;
+		li {
+			list-style: disc;
 
-				&::marker{
-					color: $blue;
-					font-size: 18px;
-				}
+			&::marker {
+				color: $blue;
+				font-size: 18px;
+			}
 
 			&:not(:last-child) {
 				margin-bottom: 14px;
 			}
 		}
 	}
+
+	blockquote {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		padding: 20px;
+		border-radius: 20px;
+		border: 1px solid #EDEDEE;
+		row-gap: 20px;
+		column-gap: 10px;
+		margin-bottom: 30px;
+		color: $blue-color;
+
+		&::after {
+			content: '';
+			background-image: url("../img/other/quote-marker.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 34px 26px;
+			font-size: 120px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			width: 60px;
+			height: 60px;
+			color: $blue-color;
+			border-radius: 10px;
+			background-color: $bg-ter;
+			order: -2;
+		}
+
+		&::before {
+			content: "";
+			flex-basis: calc(100% - 70px);
+			display: block;
+			height: 1px;
+			background-color: #EDEDEE;
+		}
+	}
 }
 
-@media(min-width: 1024px){
-	.text-block{
+@media(min-width: 1024px) {
+	.text-block {
 		font-size: 20px;
 		line-height: 28px;
+
+		h1, h2, h3,h4, h5, h6{
+			font-size: 36px;
+			line-height: 42px;
+		}
+
+		blockquote{
+			font-size: 24px;
+			line-height: 32px;
+			flex-wrap: nowrap;
+			padding: 30px;
+			border-radius: 30px;
+			gap: 30px;
+			align-items: center;
+
+			&::before{
+				width: 1px;
+				height: 96px;
+				flex-basis: 1px;
+			}
+
+			&::after{
+				width: 80px;
+				height: 80px;
+			}
+		}
 	}
 }

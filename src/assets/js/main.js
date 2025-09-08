@@ -439,14 +439,13 @@ function toggleClassOnScroll(element, topFixed) {
 			element.classList.add("top-fixed")
 			isTopFixed = true
 		}
-		if (elementRect.bottom >= parentRect.bottom) {
+		if (elementRect.bottom > parentRect.bottom) {
 			element.classList.remove("top-fixed")
 			element.classList.add("bottom-fixed")
 			isTopFixed = false
 			isBottomFixed = true
-			bottomLine = parentRect.bottom
 		}
-		if (isBottomFixed && bottomLine < parentRect.bottom) {
+		if (isBottomFixed && elementRect.top > topFixed + 1) {
 			element.classList.remove("bottom-fixed")
 			isBottomFixed = false
 		}
