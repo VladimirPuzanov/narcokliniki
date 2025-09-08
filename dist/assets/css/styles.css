@@ -3817,6 +3817,27 @@ body.lock {
   height: 100%;
 }
 
+.select-city .popup__body {
+  padding: 0;
+}
+.select-city .popup__content {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  padding: 30px 20px;
+}
+.select-city .close-popup {
+  right: 20px;
+  top: 20px;
+}
+.select-city .popup-title {
+  font-size: 24px;
+  line-height: 32px;
+  color: #2B3746;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
 .text-block {
   font-size: 16px;
   line-height: 24px;

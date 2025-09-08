@@ -91,3 +91,29 @@
   width: 100%;
   height: 100%;
 }
+
+.select-city{
+  .popup__body{
+    padding: 0;
+  }
+
+  .popup__content{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 30px 20px;
+  }
+
+  .close-popup{
+    right: 20px;
+    top: 20px;
+  }
+
+  .popup-title{
+    font-size: 24px;
+    line-height: 32px;
+    color: $prim;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+}
