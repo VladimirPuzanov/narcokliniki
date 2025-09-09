@@ -1,0 +1,81 @@
+.contacts{
+	padding: 6px;
+	margin-bottom: 14px;
+
+	&__content{
+		padding: 20px;
+		border-radius: 20px;
+		background-color: $bg-ter;
+	}
+
+	&__row{
+		margin-bottom: 30px;
+	}
+
+	&__title{
+		color: $prim;
+		font-size: 36px;
+		line-height: 42px;
+		font-weight: 600;
+		margin-bottom: 14px;
+	}
+
+	&__subtitle{
+		color: $prim;
+		font-size: 16px;
+		line-height: 24px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #2B37461A;
+		margin-bottom: 30px;
+	}
+
+	&__item{
+		&:not(:last-child){
+			margin-bottom: 30px;
+		}
+
+		a{
+			color: $blue-color;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 26px;
+			transition: color 0.5s;
+
+			@media(hover : hover){
+				&:hover{
+					color: $orange;
+				}
+			}
+		}
+
+		span{
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 600;
+			color: #2B3746CC;
+		}
+	}
+
+	&__text{
+		color: #2B374680;
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 4px;
+	}
+
+	&__map{
+		height: 440px;
+		width: 100%;
+		border-radius: 20px;
+		overflow: hidden;
+
+		#map{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.breadcrambs_contacts{
+	margin-bottom: 36px;
+}
