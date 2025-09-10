@@ -209,15 +209,15 @@
   }
 }
 
-@media(min-width: 1024px){
-  .select-city{
-    &.open{
-      .popup__content{
+@media(min-width: 1024px) {
+  .select-city {
+    &.open {
+      .popup__content {
         left: 0;
       }
     }
 
-    .popup__content{
+    .popup__content {
       scale: 1;
       max-width: 750px;
       margin-left: auto;
@@ -228,51 +228,51 @@
       left: 750px;
       transition: 0.5s;
 
-      .close-popup{
+      .close-popup {
         top: 60px;
         right: 30px;
       }
     }
 
-    .popup-title{
+    .popup-title {
       font-size: 36px;
       line-height: 42px;
       margin-bottom: 40px;
     }
 
-    &__input-wrapper{
+    &__input-wrapper {
       margin-bottom: 60px;
     }
 
-    &__results-title{
+    &__results-title {
       font-size: 24px;
       line-height: 32px;
       margin-bottom: 30px;
     }
 
-    &__input{
+    &__input {
       font-size: 18px;
       line-height: 26px;
     }
 
-    &__results{
+    &__results {
       column-gap: 40px;
       row-gap: 14px;
 
-      li{
+      li {
         flex-basis: calc(50% - 20px);
 
-        a{
+        a {
           gap: 10px;
 
-          span{
+          span {
             padding: 2px 10px;
             border-radius: 6px;
             font-size: 14px;
             line-height: 20px;
           }
 
-          p{
+          p {
             font-size: 18px;
             line-height: 26px;
           }
@@ -280,4 +280,149 @@
       }
     }
   }
+}
+
+.review-popup {
+  .popup-title{
+    font-size: 20px;
+    line-height: 28px;
+    color: $prim;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .popup__form-wrapper{
+    max-height: calc(100vh - 78px);
+    overflow: auto;
+    padding-bottom: 30px;
+  }
+
+  .popup__body {
+    padding: 0;
+  }
+
+  .popup__content {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 30px 20px;
+  }
+
+  .close-popup {
+    right: 20px;
+    top: 20px;
+  }
+
+  .popup-form{
+    padding: 14px;
+    border-radius: 20px;
+    border: 1px solid #EDEDEE;
+
+    &__text{
+      color: #2B374680;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:not(:last-child){
+        margin-bottom: 14px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #EDEDEE;
+      }
+
+      label{
+        font-size: 14px;
+        line-height: 20px;
+        color: $prim;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      input{
+        font-size: 16px;
+        line-height: 24px;
+        color: $prim;
+        padding: 12px 16px;
+        border: 1px solid #2B37461A;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      textarea{
+        
+      }
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .review-popup {
+    &.open {
+      .popup__content {
+        left: 0;
+      }
+    }
+
+    .popup__content {
+      scale: 1;
+      max-width: 750px;
+      margin-left: auto;
+      border-radius: 40px 0 0 40px;
+      padding: 60px;
+      padding-right: 30px;
+      position: relative;
+      left: 750px;
+      transition: 0.5s;
+
+      .close-popup {
+        top: 60px;
+        right: 30px;
+      }
+    }
+  }
+}
+
+.rating-area {
+	overflow: hidden;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	position: relative;
 }

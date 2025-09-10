@@ -64,7 +64,7 @@
     </header><main class="main">
     <section class="contacts">
     	<div class="contacts__content">
-    		<div class="breadcrambs breadcrambs_contacts to_animate left-fade">
+    		<div class="breadcrambs breadcrambs_contacts to_animate up-fade">
     			<a href="/" class="breadcrambs__home">
     				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
     					<g clip-path="url(#clip0_420_4840)">
@@ -93,7 +93,7 @@
     			</span>
     		</div>
     		<div class="contacts__row">
-    			<div class="contacts__col contacts__col_title">
+    			<div class="contacts__col contacts__col_title to_animate left-fade">
     				<h1 class="contacts__title">
     					Контакты
     				</h1>
@@ -101,7 +101,7 @@
     					Задайте нам любой вопрос, мы всегда рады помочь
     				</p>
     			</div>
-    			<div class="contacts__col contacts__col_info">
+    			<div class="contacts__col contacts__col_info to_animate right-fade">
     				<div class="contacts__item">
     					<p class="contacts__text">
     						Круглосуточный номер:
@@ -128,7 +128,7 @@
     				</div>
     			</div>
     		</div>
-    		<div class="contacts__map">
+    		<div class="contacts__map to_animate down-fade">
     			<div id="map"></div>
     		</div>
     	</div>
@@ -393,11 +393,137 @@
 				</ul>
 				<script>
 					const input = document.querySelector(".select-city__input")
-					input.addEventListener("keydown", ()=>{
+					input.addEventListener("keydown", () => {
 						document.querySelector(".select-city__results")?.remove()
 						document.querySelector(".select-city__info").innerHTML = "<p>Ничего не найдено</p>"
 					})
 				</script>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup review-popup" data-target="popup-review">
+	<div class="popup__body">
+		<div class="popup__content">
+			<picture class="close-popup">
+				<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M11.9689 13.0303L0.969297 2.0307L2.03026 0.96974L13.0298 11.9693L11.9689 13.0303ZM2.03435 13.0344L0.965204 11.9652L11.9648 0.965647L13.0339 2.0348L2.03435 13.0344Z"
+						fill-opacity="0.6" />
+				</svg>
+			</picture>
+			<p class="popup-title">
+				Отзыв о клинике
+			</p>
+			<div class="popup__form-wrapper">
+				<form class="popup-form">
+					<div class="popup-form__item">
+						<label>Месторасположение</label>
+						<div class="rating-area">
+							<input type="radio" id="star-5" name="rating" value="5">
+							<label for="star-5" title="Оценка «5»"></label>
+							<input type="radio" id="star-4" name="rating" value="4">
+							<label for="star-4" title="Оценка «4»"></label>
+							<input type="radio" id="star-3" name="rating" value="3">
+							<label for="star-3" title="Оценка «3»"></label>
+							<input type="radio" id="star-2" name="rating" value="2">
+							<label for="star-2" title="Оценка «2»"></label>
+							<input type="radio" id="star-1" name="rating" value="1">
+							<label for="star-1" title="Оценка «1»"></label>
+						</div>
+					</div>
+					<div class="popup-form__item">
+						<label>Месторасположение</label>
+						<div class="rating-area">
+							<input type="radio" id="star-10" name="place" value="5">
+							<label for="star-10" title="Оценка «5»"></label>
+							<input type="radio" id="star-9" name="place" value="4">
+							<label for="star-9" title="Оценка «4»"></label>
+							<input type="radio" id="star-8" name="place" value="3">
+							<label for="star-8" title="Оценка «3»"></label>
+							<input type="radio" id="star-7" name="place" value="2">
+							<label for="star-7" title="Оценка «2»"></label>
+							<input type="radio" id="star-6" name="place" value="1">
+							<label for="star-6" title="Оценка «1»"></label>
+						</div>
+					</div>
+					<div class="popup-form__item">
+						<label>Персонал клиники</label>
+						<div class="rating-area">
+							<input type="radio" id="star-15" name="personlal" value="5">
+							<label for="star-15" title="Оценка «5»"></label>
+							<input type="radio" id="star-14" name="personlal" value="4">
+							<label for="star-14" title="Оценка «4»"></label>
+							<input type="radio" id="star-13" name="personlal" value="3">
+							<label for="star-13" title="Оценка «3»"></label>
+							<input type="radio" id="star-12" name="personlal" value="2">
+							<label for="star-12" title="Оценка «2»"></label>
+							<input type="radio" id="star-11" name="personlal" value="1">
+							<label for="star-11" title="Оценка «1»"></label>
+						</div>
+					</div>
+					<div class="popup-form__item">
+						<label>Цена / качество</label>
+						<div class="rating-area">
+							<input type="radio" id="star-20" name="price" value="5">
+							<label for="star-20" title="Оценка «5»"></label>
+							<input type="radio" id="star-19" name="price" value="4">
+							<label for="star-19" title="Оценка «4»"></label>
+							<input type="radio" id="star-18" name="price" value="3">
+							<label for="star-18" title="Оценка «3»"></label>
+							<input type="radio" id="star-17" name="price" value="2">
+							<label for="star-17" title="Оценка «2»"></label>
+							<input type="radio" id="star-16" name="price" value="1">
+							<label for="star-16" title="Оценка «1»"></label>
+						</div>
+					</div>
+					<div class="popup-form__item">
+						<label>Комфорт пребывания</label>
+						<div class="rating-area">
+							<input type="radio" id="star-25" name="comfort" value="5">
+							<label for="star-25" title="Оценка «5»"></label>
+							<input type="radio" id="star-24" name="comfort" value="4">
+							<label for="star-24" title="Оценка «4»"></label>
+							<input type="radio" id="star-23" name="comfort" value="3">
+							<label for="star-23" title="Оценка «3»"></label>
+							<input type="radio" id="star-22" name="comfort" value="2">
+							<label for="star-22" title="Оценка «2»"></label>
+							<input type="radio" id="star-21" name="comfort" value="1">
+							<label for="star-21" title="Оценка «1»"></label>
+						</div>
+					</div>
+					<div class="popup-form__item">
+						<label>Посоветуете ли вы клинику?</label>
+						<div class="rating-area">
+							<input type="radio" id="star-30" name="what" value="5">
+							<label for="star-5" title="Оценка «5»"></label>
+							<input type="radio" id="star-29" name="what" value="4">
+							<label for="star-4" title="Оценка «4»"></label>
+							<input type="radio" id="star-28" name="what" value="3">
+							<label for="star-3" title="Оценка «3»"></label>
+							<input type="radio" id="star-27" name="what" value="2">
+							<label for="star-2" title="Оценка «2»"></label>
+							<input type="radio" id="star-26" name="what" value="1">
+							<label for="star-1" title="Оценка «1»"></label>
+						</div>
+					</div>
+					<div class="popup-form__item">
+						<label for="name">Ваше имя</label>
+						<input type="text" id="name">
+					</div>
+						<div class="popup-form__item">
+						<label for="name">Напишите про ваши впечатления</label>
+						<p class="popup-form__text">
+							(не менее 50 символов)
+						</p>
+						<textarea name="" id="" rows="10"></textarea>
+						<div class="popup-form__politic">
+							<input type="checkbox" name="" id="">
+							<p>Нажимая кнопку я соглашаюсь с политикой конфиденциальности и пользовательским соглашением</p>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
