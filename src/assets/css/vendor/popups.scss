@@ -283,7 +283,7 @@
 }
 
 .review-popup {
-  .popup-title{
+  .popup-title {
     font-size: 20px;
     line-height: 28px;
     color: $prim;
@@ -291,8 +291,8 @@
     font-weight: 600;
   }
 
-  .popup__form-wrapper{
-    max-height: calc(100vh - 78px);
+  .popup__form-wrapper {
+    max-height: calc(100vh - 178px);
     overflow: auto;
     padding-bottom: 30px;
   }
@@ -313,30 +313,31 @@
     top: 20px;
   }
 
-  .popup-form{
+  .popup-form {
     padding: 14px;
     border-radius: 20px;
     border: 1px solid #EDEDEE;
 
-    &__text{
+    &__text {
       color: #2B374680;
       font-size: 14px;
       line-height: 20px;
       margin-bottom: 10px;
     }
 
-    &__item{
+    &__item {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #EDEDEE;
 
-      &:not(:last-child){
-        margin-bottom: 14px;
-        padding-bottom: 14px;
-        border-bottom: 1px solid #EDEDEE;
+      &:last-child{
+        
       }
 
-      label{
+      label {
         font-size: 14px;
         line-height: 20px;
         color: $prim;
@@ -344,7 +345,7 @@
         font-weight: 600;
       }
 
-      input{
+      input {
         font-size: 16px;
         line-height: 24px;
         color: $prim;
@@ -352,11 +353,51 @@
         border: 1px solid #2B37461A;
         border-radius: 10px;
         width: 100%;
+
+        &::placeholder {
+          color: #2B374699;
+        }
       }
 
-      textarea{
-        
+      textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid #2B37461A;
+        border-radius: 10px;
+        color: $prim;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+
+        &::placeholder {
+          color: #2B374699;
+        }
       }
+    }
+
+    &__politic {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+
+      input {
+        width: 16px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        color: #2B374699;
+      }
+    }
+
+    &__button {
+      color: $bg-prim;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 16px;
+      background-color: $blue-color;
+      width: 100%;
     }
   }
 }
@@ -366,6 +407,21 @@
     &.open {
       .popup__content {
         left: 0;
+      }
+    }
+
+    .popup-title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 40px;
+    }
+
+    .popup-form {
+      &__item {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
       }
     }
 
@@ -389,40 +445,47 @@
 }
 
 .rating-area {
-	overflow: hidden;
+  overflow: hidden;
 }
-.rating-area:not(:checked) > input {
-	display: none;
+
+.rating-area:not(:checked)>input {
+  display: none;
 }
-.rating-area:not(:checked) > label {
-	float: right;
-	width: 42px;
-	padding: 0;
-	cursor: pointer;
-	font-size: 32px;
-	line-height: 32px;
-	color: lightgrey;
-	text-shadow: 1px 1px #bbb;
+
+.rating-area:not(:checked)>label {
+  float: right;
+  width: 42px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 32px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
 }
-.rating-area:not(:checked) > label:before {
-	content: '★';
+
+.rating-area:not(:checked)>label:before {
+  content: '★';
 }
-.rating-area > input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px #c60;
+
+.rating-area>input:checked~label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
 }
-.rating-area:not(:checked) > label:hover,
-.rating-area:not(:checked) > label:hover ~ label {
-	color: gold;
+
+.rating-area:not(:checked)>label:hover,
+.rating-area:not(:checked)>label:hover~label {
+  color: gold;
 }
-.rating-area > input:checked + label:hover,
-.rating-area > input:checked + label:hover ~ label,
-.rating-area > input:checked ~ label:hover,
-.rating-area > input:checked ~ label:hover ~ label,
-.rating-area > label:hover ~ input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px goldenrod;
+
+.rating-area>input:checked+label:hover,
+.rating-area>input:checked+label:hover~label,
+.rating-area>input:checked~label:hover,
+.rating-area>input:checked~label:hover~label,
+.rating-area>label:hover~input:checked~label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
 }
-.rate-area > label:active {
-	position: relative;
+
+.rate-area>label:active {
+  position: relative;
 }

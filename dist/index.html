@@ -55,7 +55,7 @@
     					<li><a href="#">Контакты</a></li>
     				</ul>
     			</nav>
-    			<button class="primary-button header__button">
+    			<button class="primary-button header__button popup-btn" data-path="popup-review">
     				<span class="primary-button__plus"></span>
     				<span class="primary-button__text">Добавить клинику</span>
     			</button>
@@ -1462,19 +1462,22 @@
 					</div>
 					<div class="popup-form__item">
 						<label for="name">Ваше имя</label>
-						<input type="text" id="name">
+						<input type="text" id="name" placeholder="Введите Ваше имя здесь...">
 					</div>
-						<div class="popup-form__item">
+					<div class="popup-form__item">
 						<label for="name">Напишите про ваши впечатления</label>
 						<p class="popup-form__text">
 							(не менее 50 символов)
 						</p>
-						<textarea name="" id="" rows="10"></textarea>
+						<textarea name="" id="" rows="10" placeholder="Введите Ваш текст здесь..."></textarea>
 						<div class="popup-form__politic">
 							<input type="checkbox" name="" id="">
 							<p>Нажимая кнопку я соглашаюсь с политикой конфиденциальности и пользовательским соглашением</p>
 						</div>
 					</div>
+					<button class="popup-form__button">
+						Отправить
+					</button>
 				</form>
 			</div>
 		</div>
