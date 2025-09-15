@@ -55,10 +55,10 @@
     					<li><a href="#">Контакты</a></li>
     				</ul>
     			</nav>
-    			<button class="primary-button header__button popup-btn" data-path="popup-review">
+    			<a href="#" class="primary-button header__button">
     				<span class="primary-button__plus"></span>
     				<span class="primary-button__text">Добавить клинику</span>
-    			</button>
+    			</a>
     		</div>
     	</div>
     </header><main class="main">
@@ -534,21 +534,6 @@
 						</div>
 					</div>
 					<div class="popup-form__item">
-						<label>Месторасположение</label>
-						<div class="rating-area">
-							<input type="radio" id="star-10" name="place" value="5">
-							<label for="star-10" title="Оценка «5»"></label>
-							<input type="radio" id="star-9" name="place" value="4">
-							<label for="star-9" title="Оценка «4»"></label>
-							<input type="radio" id="star-8" name="place" value="3">
-							<label for="star-8" title="Оценка «3»"></label>
-							<input type="radio" id="star-7" name="place" value="2">
-							<label for="star-7" title="Оценка «2»"></label>
-							<input type="radio" id="star-6" name="place" value="1">
-							<label for="star-6" title="Оценка «1»"></label>
-						</div>
-					</div>
-					<div class="popup-form__item">
 						<label>Персонал клиники</label>
 						<div class="rating-area">
 							<input type="radio" id="star-15" name="personlal" value="5">
@@ -608,16 +593,16 @@
 							<label for="star-26" title="Оценка «1»"></label>
 						</div>
 					</div>
-					<div class="popup-form__item">
+					<div class="popup-form__item popup-form__item_no-border">
 						<label for="name">Ваше имя</label>
 						<input type="text" id="name" placeholder="Введите Ваше имя здесь...">
 					</div>
-					<div class="popup-form__item">
+					<div class="popup-form__item popup-form__item_no-border">
 						<label for="name">Напишите про ваши впечатления</label>
 						<p class="popup-form__text">
 							(не менее 50 символов)
 						</p>
-						<textarea name="" id="" rows="10" placeholder="Введите Ваш текст здесь..."></textarea>
+						<textarea name="" id="" rows="5" placeholder="Введите Ваш текст здесь..."></textarea>
 						<div class="popup-form__politic">
 							<input type="checkbox" name="" id="">
 							<p>Нажимая кнопку я соглашаюсь с политикой конфиденциальности и пользовательским соглашением</p>
@@ -627,6 +612,304 @@
 						Отправить
 					</button>
 				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup test-popup test" data-target="popup-test">
+	<div class="popup__body">
+		<div class="popup__content">
+			<picture class="close-popup">
+				<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M11.9689 13.0303L0.969297 2.0307L2.03026 0.96974L13.0298 11.9693L11.9689 13.0303ZM2.03435 13.0344L0.965204 11.9652L11.9648 0.965647L13.0339 2.0348L2.03435 13.0344Z"
+						fill-opacity="0.6" />
+				</svg>
+			</picture>
+			<form action="" class="test__form">
+				<div class="test__swiper-pics swiper">
+					<div class="test__swiper-pics-wrapper swiper-wrapper">
+						<div class="swiper-slide test__slide-pic">
+							<picture class="test__pic to_animate fade-in">
+								<source srcset="assets/img/test/step-1.webp" type="image/webp">
+								<img src="assets/img/test/step-1.png" alt="Шаг 1">
+							</picture>
+						</div>
+						<div class="swiper-slide test__slide-pic">
+							<picture class="test__pic to_animate fade-in">
+								<source srcset="assets/img/test/step-2.webp" type="image/webp">
+								<img src="assets/img/test/step-2.png" alt="Шаг 1">
+							</picture>
+						</div>
+						<div class="swiper-slide test__slide-pic">
+							<picture class="test__pic to_animate fade-in">
+								<source srcset="assets/img/test/step-3.webp" type="image/webp">
+								<img src="assets/img/test/step-3.png" alt="Шаг 1">
+							</picture>
+						</div>
+						<div class="swiper-slide test__slide-pic">
+							<picture class="test__pic to_animate fade-in">
+								<source srcset="assets/img/test/step-4.webp" type="image/webp">
+								<img src="assets/img/test/step-4.png" alt="Шаг 1">
+							</picture>
+						</div>
+						<div class="swiper-slide test__slide-pic">
+							<picture class="test__pic to_animate fade-in">
+								<source srcset="assets/img/test/step-5.webp" type="image/webp">
+								<img src="assets/img/test/step-5.png" alt="Шаг 1">
+							</picture>
+						</div>
+						<div class="swiper-slide test__slide-pic">
+							<picture class="test__pic to_animate fade-in">
+								<source srcset="assets/img/test/step-6.webp" type="image/webp">
+								<img src="assets/img/test/step-6.png" alt="Шаг 1">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="test__progress"></div>
+				<div class="test__swiper swiper">
+					<div class="test__swiper-wrapper swiper-wrapper">
+						<div class="test__content swiper-slide">
+							<p class="test__number">
+								Шаг 1.
+							</p>
+							<p class="test__title">
+								Направление лечения
+							</p>
+							<p class="test__question">
+								Что именно вас беспокоит?
+							</p>
+							<div class="test__inner">
+								<div class="test__item">
+									<input type="radio" name="step-1" id="step-1-1">
+									<label for="step-1-1">Наркозависимость</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-1" id="step-1-2">
+									<label for="step-1-2">Психиатрия</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-1" id="step-1-3">
+									<label for="step-1-3">Алкоголизм</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-1" id="step-1-4">
+									<label for="step-1-4">Игромания</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-1" id="step-1-5">
+									<label for="step-1-5">Запой</label>
+								</div>
+							</div>
+						</div>
+						<div class="test__content swiper-slide">
+							<p class="test__number">
+								Шаг 2.
+							</p>
+							<p class="test__title">
+								Цель лечения
+							</p>
+							<p class="test__question">
+								Я хочу решить проблему:
+							</p>
+							<div class="test__inner">
+								<div class="test__item test__item_wide">
+									<input type="radio" name="step-2" id="step-2-1">
+									<label for="step-2-1">Временно (детоксикация/кодирование)</label>
+								</div>
+								<div class="test__item test__item_wide">
+									<input type="radio" name="step-2" id="step-2-2">
+									<label for="step-2-2">Надолго (реабилитация с гарантией от срывов)</label>
+								</div>
+							</div>
+						</div>
+						<div class="test__content swiper-slide">
+							<p class="test__number">
+								Шаг 3.
+							</p>
+							<p class="test__title">
+								Данные о пациенте
+							</p>
+							<p class="test__question">
+								Кому требуется помощь?
+							</p>
+							<div class="test__inner">
+								<div class="test__item">
+									<input type="radio" name="step-3" id="step-3-1">
+									<label for="step-3-1">Мне</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-3" id="step-3-2">
+									<label for="step-3-2">Мужу/жене</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-3" id="step-3-3">
+									<label for="step-3-3">Моему сыну/дочери</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-3" id="step-3-4">
+									<label for="step-3-4">Родственнику</label>
+								</div>
+							</div>
+						</div>
+						<div class="test__content swiper-slide">
+							<p class="test__number">
+								Шаг 4.
+							</p>
+							<p class="test__title">
+								Данные о пациенте
+							</p>
+							<p class="test__question">
+								Укажите возраст человека, которому требуется помощь
+							</p>
+							<div class="test__inner">
+								<div class="test__item">
+									<input type="radio" name="step-4" id="step-4-1">
+									<label for="step-4-1">До 18 лет</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-4" id="step-4-2">
+									<label for="step-4-2">46–60 лет</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-4" id="step-4-3">
+									<label for="step-4-3">18–30 лет</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-4" id="step-4-4">
+									<label for="step-4-4">60+ лет</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-4" id="step-4-5">
+									<label for="step-4-5">31–45 лет</label>
+								</div>
+							</div>
+						</div>
+						<div class="test__content swiper-slide">
+							<p class="test__number">
+								Шаг 5.
+							</p>
+							<p class="test__title">
+								Хронические заболевания
+							</p>
+							<p class="test__question">
+								Есть ли у пациента хронические заболевания?
+							</p>
+							<div class="test__inner">
+								<div class="test__item">
+									<input type="radio" name="step-5" id="step-5-1">
+									<label for="step-5-1">Нет</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-5" id="step-5-2">
+									<label for="step-5-2">Сердечно-сосудистые</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-5" id="step-5-3">
+									<label for="step-5-3">Сахарный диабет</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-5" id="step-5-4">
+									<label for="step-5-4">Психические заболевания</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-5" id="step-5-5">
+									<label for="step-5-5">Гепатит</label>
+								</div>
+								<div class="test__item">
+									<input type="radio" name="step-5" id="step-5-6">
+									<label for="step-5-6">Другое</label>
+								</div>
+							</div>
+						</div>
+						<div class="test__content swiper-slide">
+							<p class="test__number">
+								Шаг 6.
+							</p>
+							<p class="test__title">
+								Контактные данные
+							</p>
+							<div class="test__inner">
+								<div class="test__item test__item_input">
+									<label>Ваше имя</label>
+									<input type="text">
+								</div>
+								<div class="test__item test__item_input">
+									<label>Город</label>
+									<div class="city-input__wrapper">
+										<input type="text" class="city-input">
+										<div class="city-input__options">
+											<ul class="">
+												<li>Армавир</li>
+												<li>Барнаул</li>
+												<li>Владимир</li>
+												<li>Грозный</li>
+												<li>Донецк</li>
+												<li>Армавир</li>
+												<li>Барнаул</li>
+												<li>Владимир</li>
+												<li>Грозный</li>
+												<li>Донецк</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="test__item test__item_input">
+									<label>Телефон</label>
+									<input type="text">
+								</div>
+								<div class="test__item">
+									<div class="test__politic">
+										<input type="checkbox" name="" id="">
+										<p>Нажимая кнопку я соглашаюсь с политикой конфиденциальности и пользовательским соглашением</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test__buttons">
+					<button type="button" class="test__button test__button_prev">
+						Назад
+					</button>
+					<button type="button" class="test__button test__button_next">
+						Далее
+					</button>
+					<button type="button" class="test__button test__button_submit popup-btn" data-path="popup-result">
+						Отправить
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popup result-popup result" data-target="popup-result">
+	<div class="popup__body">
+		<div class="popup__content">
+			<picture class="close-popup">
+				<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M11.9689 13.0303L0.969297 2.0307L2.03026 0.96974L13.0298 11.9693L11.9689 13.0303ZM2.03435 13.0344L0.965204 11.9652L11.9648 0.965647L13.0339 2.0348L2.03435 13.0344Z"
+						fill-opacity="0.6" />
+				</svg>
+			</picture>
+			<picture class="result__pic">
+				<source srcset="assets/img/test/result.webp" type="image/webp">
+				<img src="assets/img/test/result.png" alt="Изображение результата">
+			</picture>
+			<div class="result__content">
+				<p class="result__title">
+					Спасибо, данные успешно отправлены!
+				</p>
+				<p class="result__subtitle">
+					Наш специалист свяжется с Вами в течение 30 минут
+				</p>
+				<button class="close-popup result__button">
+					Закрыть
+				</button>
 			</div>
 		</div>
 	</div>

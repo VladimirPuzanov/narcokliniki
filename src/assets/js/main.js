@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		el.addEventListener('click', function (e) {
 			e.preventDefault();
 			const path = e.currentTarget.dataset.path;
-			if(path == "popup-map"){
+			if (path == "popup-map") {
 				coords = e.currentTarget.dataset.coords
 				coords = coords.split(",")
 			}
@@ -539,9 +539,9 @@ function loadMap(coords) {
 		const script = document.createElement('script');
 		script.type = 'text/javascript';
 		script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
-		script.onload = function() {
-            initMap(coords);
-        };;
+		script.onload = function () {
+			initMap(coords);
+		};;
 		document.head.appendChild(script);
 	} else {
 		initMap(coords);
@@ -564,5 +564,79 @@ function initMap(coords) {
 		myMap.geoObjects.add(myPlacemark);
 		myMap.behaviors.disable(['scrollZoom']);
 		mapObj = myMap
+	});
+}
+
+testPic = new Swiper(document.querySelector(".test__swiper-pics.swiper"), {
+	spaceBetween: 3,
+	slidesPerView: 1,
+	allowTouchMove: false,
+	simulateTouch: false,
+	navigation: {
+		nextEl: '.test__button_next',
+		prevEl: '.test__button_prev',
+	},
+	pagination: {
+		el: ".test__progress",
+		type: "progressbar",
+	},
+	on: {
+		slideChange: function () {
+			if (this.activeIndex == 5) {
+				document.querySelector(".test__button_next").style.display = "none";
+				document.querySelector(".test__button_submit").style.display = "block";
+			} else {
+				document.querySelector(".test__button_submit").removeAttribute("style")
+				document.querySelector(".test__button_next").removeAttribute("style")
+			}
+		}
+	}
+})
+
+testСontent = new Swiper(document.querySelector(".test__swiper.swiper"), {
+	spaceBetween: 3,
+	slidesPerView: 1,
+	allowTouchMove: false,
+	simulateTouch: false,
+	navigation: {
+		nextEl: '.test__button_next',
+		prevEl: '.test__button_prev',
+	},
+})
+
+const cityInput = document.querySelector(".city-input")
+const cityList = document.querySelector(".city-input__options")
+if (cityInput && cityList) {
+	cityList.querySelectorAll("li").forEach(el => {
+		el.addEventListener("click", () => {
+			cityInput.value = el.innerHTML
+			cityList.classList.remove("active")
+		})
+	})
+
+	function initList(value, list) {
+		listElements = list.querySelectorAll("li")
+		listElements.forEach(el => {
+			if (el.innerHTML.indexOf(value) == -1) {
+				el.style.display = "none"
+			} else {
+				el.removeAttribute("style")
+			}
+		})
+		cityList.classList.add("active")
+	}
+
+	cityInput.addEventListener('focus', () => {
+		initList(cityInput.value, cityList)
+	});
+
+	cityInput.addEventListener('input', () => {
+		initList(cityInput.value, cityList)
+	});
+
+	cityInput.addEventListener('blur', () => {
+		setTimeout(() => {
+			cityList.classList.remove("active")
+		}, 100);
 	});
 }
