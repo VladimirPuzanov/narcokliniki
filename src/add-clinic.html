@@ -106,7 +106,7 @@
 				</div>
 			</div>
 			<div class="add__tab-content add__tab-content_row">
-				<div class="add__tab-content_col">
+				<div class="add__tab-content-col add__tab-content-col_form">
 					<div class="add__input-wrapper">
 						<div class="add__count-wrapper">
 							<label for="title">Наименование клиники * <span>(Заголовок)</span></label>
@@ -123,13 +123,208 @@
 					</div>
 					<div class="add__input-wrapper">
 						<div class="add__count-wrapper">
-							<label for="title">Полное описание деятельности * (О клинике)</label>
+							<label for="des">Полное описание деятельности * (О клинике)</label>
 							<span class="add__count">300</span>
 						</div>
-						<textarea name="" id=""></textarea>
+						<textarea name="" id="des"></textarea>
+					</div>
+					<div class="add__input-wrapper">
+						<label for="">Лечение <span>(Выберите тэги)</span></label>
+						<input type="hidden" name="hill">
+						<div class="add__tags-container">
+							<div class="add__tag">
+								Алкоголизм
+							</div>
+							<div class="add__tag">
+								Наркомания
+							</div>
+						</div>
+					</div>
+					<div class="add__input-wrapper">
+						<label for="">Категория <span>(Выберите тэги)</span></label>
+						<input type="hidden" name="category">
+						<div class="add__tags-container">
+							<div class="add__tag">
+								Медицинский центр
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="add__tab-content-col add__tab-content-col_preview preview">
+					<p class="preview__title">
+						Превью карточки клиники
+					</p>
+					<p class="preview__subtitle">
+						Здесь вы можете посмотреть как будет отображаться информация о вашей организации на сайте 
+					</p>
+					<div class="preview__card">
+						<picture class="preview__pic">
+							<img src="assets/img/best-clinics/plug.webp" alt="Заглушка фотографии">
+						</picture>
+						<p class="preview__name">
+							Название клиники
+						</p>
+						<p class="preview__des">Наркологическая клиника, реабилитационный центр </p>
 					</div>
 				</div>
 			</div>
+			<div class="add__tab-content add__tab-content_row">
+				<div class="add__tab-content-col add__tab-content-col_form">
+					<div class="add__input-wrapper">
+						<label for="country">Страна *</label>
+						<div class="add__select-wrapper">
+							<select name="country" id="">
+								<option value="">Россия</option>
+								<option value="">Россия</option>
+								<option value="">Россия</option>
+								<option value="">Россия</option>
+								<option value="">Қазақстан</option>
+							</select>
+						</div>
+					</div>
+					<div class="add__input-wrapper">
+						<label for="region">Регион / область *</label>
+						<input type="text" name="" id="region" placeholder="Московская область">
+					</div>
+					<div class="add__input-wrapper">
+						<label for="address">Улица, дом, офис *</label>
+						<input type="text" name="" id="address" placeholder="ул. Ленина, д.10, оф. 10">
+					</div>
+					<div class="add__input-wrapper">
+						<label for="postix">Почтовый индекс</label>
+						<input type="text" name="" id="postix" placeholder="130370">
+					</div>
+					<div class="add__input-wrapper">
+						<label for="adress">Координаты</label>
+						<input type="text" name="" id="coords" placeholder="40.7127837, -74.005941">
+					</div>
+					<div class="add__input-wrapper">
+						<label for="site">Сайт <span>(если есть)</span></label>
+						<input type="text" name="" id="site" placeholder="https:/">
+					</div>
+					<div class="add__input-wrapper add__input-wrapper_border">
+						<label for="cmail">E-mail клиники <span>(для обращений)</span></label>
+						<input type="text" name="" id="cmail" placeholder="mail@klinik.ru">
+					</div>
+					<div class="add__input-wrapper add__input-wrapper_border">
+						<label for="cphone">Основной телефон клиники *</span></label>
+						<input type="tel" name="" id="cphone" placeholder="+7 (900) 999-00-99" required>
+					</div>
+					<div class="add__input-wrapper add__input-wrapper_border">
+						<label for="cphone2">Дополнительный телефон</span></label>
+						<input type="tel" name="" id="cphone2" placeholder="+7 (900) 999-00-99">
+					</div>
+					<div class="add__input-wrapper">
+						<div class="add__radio-row">
+							<input type="radio" name="schedule" id="schedule-1">
+							<label for="schedule-1">
+								Круглосуточно
+							</label>
+						</div>
+						<div class="add__schedule-wrapper">
+							<div class="add__radio-row">
+								<input type="radio" name="schedule" id="schedule-1">
+								<label for="schedule-1">
+									Круглосуточно
+								</label>
+							</div>
+							<div class="add__schedule">
+								<div class="add__schedule-form">
+									<div class="add__schedule-day">
+										Понедельник
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+									<div class="add__schedule-day">
+										Понедельник
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+									<div class="add__schedule-day">
+										Вторник
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+									<div class="add__schedule-day">
+										Среда
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+									<div class="add__schedule-day">
+										Четверг
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+									<div class="add__schedule-day">
+										Пятница
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+									<div class="add__schedule-day">
+										Суббота
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+									<div class="add__schedule-day">
+										Воскресенье
+										<div class="add__schedule-inputs">
+											<div>
+												<input type="time" name="" id="">
+												-
+												<input type="time" name="" id="">
+											</div>
+											<input type="checkbox" name="" id="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 		<div class="add__buttons">
 			<div class="add__button add__button_prev">
