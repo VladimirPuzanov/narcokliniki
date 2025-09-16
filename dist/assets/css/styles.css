@@ -4453,6 +4453,14 @@ body.lock {
   font-weight: 700;
   width: 100%;
 }
+.result__button_add {
+  color: #FFFFFF;
+  background-color: #6398FD;
+  margin: 0 auto;
+  display: block;
+  width: 180px;
+  text-align: center;
+}
 .result__pic {
   overflow: hidden;
   border-radius: 20px;
@@ -4470,6 +4478,9 @@ body.lock {
   border-radius: 20px;
   background-color: #6398FD;
 }
+.result__content_add {
+  background-color: transparent;
+}
 .result__title {
   font-size: 24px;
   line-height: 32px;
@@ -4478,12 +4489,18 @@ body.lock {
   font-weight: 600;
   color: #FFFFFF;
 }
+.result__title_add {
+  color: #2B3746;
+}
 .result__subtitle {
   color: rgba(255, 255, 255, 0.6980392157);
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 40px;
   text-align: center;
+}
+.result__subtitle_add {
+  color: #2B3746;
 }
 
 @media (min-width: 1024px) {
@@ -4500,6 +4517,13 @@ body.lock {
     position: relative;
     left: 750px;
     transition: 0.5s;
+  }
+  .result .popup__content_add {
+    max-width: 100%;
+  }
+  .result .popup__content_add .result__pic {
+    max-width: 500px;
+    margin: 0 auto;
   }
   .result .popup__content .close-popup {
     top: 60px;
@@ -5091,11 +5115,8 @@ a.sitemap__item,
 }
 .add__form {
   border-radius: 20px;
-  border-width: 1px, 1px, 1px, 1px;
-  border-style: solid;
-  border-color: #EDEDEE;
+  border: solid 1px #EDEDEE;
   overflow: hidden;
-  margin-bottom: 30px;
 }
 .add__stages {
   display: flex;
@@ -5246,7 +5267,7 @@ a.sitemap__item,
   line-height: 16px;
 }
 .add__politic p a {
-  color: rgba(43, 55, 70, 0.6);
+  color: #6398FD;
 }
 @media (hover: hover) {
   .add__politic p a:hover {
@@ -5256,6 +5277,9 @@ a.sitemap__item,
 .add__buttons {
   display: flex;
   gap: 10px;
+  padding: 16px 20px;
+  padding-top: 14px;
+  max-width: 250px;
 }
 .add__count-wrapper {
   display: flex;
@@ -5274,7 +5298,6 @@ a.sitemap__item,
   width: 100%;
   font-size: 16px;
   line-height: 24px;
-  color: #6398FD;
   border-radius: 10px;
   font-weight: 700;
 }
@@ -5288,6 +5311,8 @@ a.sitemap__item,
 }
 .add__button_submit {
   display: none;
+  color: #FFFFFF;
+  background-color: #6398FD;
 }
 .add__tab-content-col_form {
   margin-bottom: 30px;
@@ -5483,6 +5508,106 @@ a.sitemap__item,
   font-size: 12px;
 }
 
+@media (min-width: 1024px) {
+  .add__stages {
+    padding: 40px 60px;
+  }
+  .add__tab {
+    gap: 12px;
+  }
+  .add__tab p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .add__tab span {
+    width: 30px;
+    height: 30px;
+    background-size: 14px 9px;
+  }
+  .add__tab:not(:last-child)::after {
+    height: 4px;
+    width: 100px;
+    margin-right: 20px;
+  }
+  .add__tab-content {
+    padding: 40px 60px;
+  }
+  .add__tab-content_row {
+    gap: 100px;
+  }
+  .add__tab-content_row.active {
+    display: flex;
+  }
+  .add__tab-content-col_form {
+    width: 100%;
+  }
+  .add__tab-content-col_preview {
+    max-width: 530px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .add__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+  .add__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 60px;
+  }
+  .add__row {
+    display: flex;
+    gap: 20px;
+  }
+  .add__row:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .add__input-wrapper {
+    margin-bottom: 0;
+    flex-basis: 100%;
+  }
+  .add__input-wrapper label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .add__input-wrapper input {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .add__input-wrapper_row {
+    margin-bottom: 30px;
+  }
+  .add__politic {
+    max-width: 460px;
+  }
+  .add__politic p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .add__buttons {
+    padding: 40px 60px;
+    padding-top: 0;
+    margin-top: 0;
+    max-width: 350px;
+  }
+  .add__schedule-day {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .add__schedule-day p {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 120px;
+  }
+  .add__schedule-time {
+    margin-bottom: 0;
+  }
+  .add__schedule-inputs {
+    display: contents;
+  }
+}
 .text-block {
   font-size: 16px;
   line-height: 24px;

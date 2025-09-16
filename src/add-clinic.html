@@ -61,80 +61,93 @@
 					Добавьте контакты представителя клиники, а также информацию о вашей клинике для размещения в каталоге и
 					привлечения новых пациентов. Заполнение всех обязательных полей необходимо для проверки и публикации.
 				</p>
-				<div class="add__input-wrapper">
-					<label for="sname">Фамилия</label>
-					<input type="text" name="" id="sname" placeholder="Иванов">
-				</div>
-				<div class="add__input-wrapper">
-					<label for="name">Имя</label>
-					<input type="text" name="" id="name">
-				</div>
-				<div class="add__input-wrapper">
-					<label for="fname">Отчество</label>
-					<input type="text" name="" id="fname">
-				</div>
-				<div class="add__input-wrapper">
-					<label for="phone">Телефон представителя *</label>
-					<input type="tel" name="" id="phone" required>
-				</div>
-				<div class="add__input-wrapper">
-					<label for="mail">E-mail * <span>(будет использоваться как логин)</span></label>
-					<input type="email" name="" id="mail" required>
-				</div>
-				<div class="add__input-wrapper">
-					<label for="pass">Пароль *</label>
-					<div class="add__password-wrapper">
-						<input class="add__password" type="password" name="" id="pass" required>
-						<button type="button" class="add__show-password">
-							<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M9.27761 0.972656C8.35574 1.08203 7.65652 1.23047 6.97293 1.46484C4.7659 2.21875 2.54324 3.76953 0.761989 5.78906C0.0979266 6.54688 0.0237079 6.65625 0.00808289 6.94141C-0.00363586 7.11719 0.00808289 7.21875 0.0588641 7.31641C0.258083 7.70312 1.96902 9.51172 2.75418 10.1719C4.59793 11.7148 6.36746 12.5898 8.34793 12.9453C8.78152 13.0195 8.98074 13.0312 9.84402 13.0352C10.6175 13.0352 10.9378 13.0195 11.2815 12.9648C13.4182 12.6211 15.4886 11.6094 17.4807 9.93359C18.2659 9.27734 19.7073 7.74609 19.9339 7.33984C20.0159 7.1875 20.0237 6.82812 19.9417 6.67578C19.8479 6.49219 19.1604 5.69922 18.5589 5.07422C16.1839 2.625 13.7307 1.27734 11.1136 0.984375C10.7854 0.949219 9.54324 0.9375 9.27761 0.972656ZM11.0159 2.43359C13.305 2.67578 15.6487 4.04688 17.8206 6.40625C18.1057 6.71484 18.344 6.98047 18.3518 6.99609C18.3714 7.04688 17.1214 8.3125 16.6761 8.69922C13.594 11.3633 10.3792 12.2227 7.31277 11.1953C5.58621 10.6172 3.79324 9.36328 2.18777 7.60938C1.89871 7.29297 1.65652 7.01953 1.64871 7C1.63308 6.95312 2.92605 5.63672 3.34793 5.27344C5.85574 3.11719 8.44558 2.15625 11.0159 2.43359Z"
-									fill="#8A8C99" />
-								<path
-									d="M9.66016 3.45311C8.58984 3.54296 7.625 4.12108 7.02734 5.02343C6.62891 5.6289 6.44141 6.26171 6.44141 6.99999C6.44141 7.73827 6.62891 8.37108 7.02734 8.97655C8.26172 10.8476 10.9297 11.1133 12.5234 9.52343C13.207 8.83593 13.5547 7.98827 13.5547 6.99999C13.5547 6.01171 13.207 5.16405 12.5234 4.47655C11.7617 3.71874 10.7578 3.35936 9.66016 3.45311ZM10.6445 4.97265C11.0781 5.10546 11.5391 5.46483 11.8008 5.87499C12.2266 6.53515 12.2266 7.46483 11.8008 8.12499C11.1602 9.12108 9.84766 9.42577 8.88281 8.80468C7.53516 7.93358 7.53516 6.0664 8.875 5.19921C9.39844 4.86327 10.0273 4.78124 10.6445 4.97265Z"
-									fill="#8A8C99" />
-							</svg>
-						</button>
+				<div class="add__row">
+					<div class="add__input-wrapper">
+						<label for="sname">Фамилия</label>
+						<input type="text" name="" id="sname" placeholder="Иванов">
+					</div>
+					<div class="add__input-wrapper">
+						<label for="name">Имя</label>
+						<input type="text" name="" id="name">
+					</div>
+					<div class="add__input-wrapper">
+						<label for="fname">Отчество</label>
+						<input type="text" name="" id="fname">
 					</div>
 				</div>
-				<div class="add__input-wrapper">
-					<div class="add__politic">
-						<input type="checkbox">
-						<p>Нажимая кнопку я соглашаюсь с <a href="#">политикой конфиденциальности</a> и <a href="#">пользовательским
-								соглашением</a></p>
+				<div class="add__row">
+					<div class="add__input-wrapper">
+						<label for="phone">Телефон представителя *</label>
+						<input type="tel" name="" id="phone" required>
+					</div>
+					<div class="add__input-wrapper">
+						<label for="mail">E-mail * <span>(будет использоваться как логин)</span></label>
+						<input type="email" name="" id="mail" required>
+					</div>
+					<div class="add__input-wrapper">
+						<label for="pass">Пароль *</label>
+						<div class="add__password-wrapper">
+							<input class="add__password" type="password" name="" id="pass" required>
+							<button type="button" class="add__show-password">
+								<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M9.27761 0.972656C8.35574 1.08203 7.65652 1.23047 6.97293 1.46484C4.7659 2.21875 2.54324 3.76953 0.761989 5.78906C0.0979266 6.54688 0.0237079 6.65625 0.00808289 6.94141C-0.00363586 7.11719 0.00808289 7.21875 0.0588641 7.31641C0.258083 7.70312 1.96902 9.51172 2.75418 10.1719C4.59793 11.7148 6.36746 12.5898 8.34793 12.9453C8.78152 13.0195 8.98074 13.0312 9.84402 13.0352C10.6175 13.0352 10.9378 13.0195 11.2815 12.9648C13.4182 12.6211 15.4886 11.6094 17.4807 9.93359C18.2659 9.27734 19.7073 7.74609 19.9339 7.33984C20.0159 7.1875 20.0237 6.82812 19.9417 6.67578C19.8479 6.49219 19.1604 5.69922 18.5589 5.07422C16.1839 2.625 13.7307 1.27734 11.1136 0.984375C10.7854 0.949219 9.54324 0.9375 9.27761 0.972656ZM11.0159 2.43359C13.305 2.67578 15.6487 4.04688 17.8206 6.40625C18.1057 6.71484 18.344 6.98047 18.3518 6.99609C18.3714 7.04688 17.1214 8.3125 16.6761 8.69922C13.594 11.3633 10.3792 12.2227 7.31277 11.1953C5.58621 10.6172 3.79324 9.36328 2.18777 7.60938C1.89871 7.29297 1.65652 7.01953 1.64871 7C1.63308 6.95312 2.92605 5.63672 3.34793 5.27344C5.85574 3.11719 8.44558 2.15625 11.0159 2.43359Z"
+										fill="#8A8C99" />
+									<path
+										d="M9.66016 3.45311C8.58984 3.54296 7.625 4.12108 7.02734 5.02343C6.62891 5.6289 6.44141 6.26171 6.44141 6.99999C6.44141 7.73827 6.62891 8.37108 7.02734 8.97655C8.26172 10.8476 10.9297 11.1133 12.5234 9.52343C13.207 8.83593 13.5547 7.98827 13.5547 6.99999C13.5547 6.01171 13.207 5.16405 12.5234 4.47655C11.7617 3.71874 10.7578 3.35936 9.66016 3.45311ZM10.6445 4.97265C11.0781 5.10546 11.5391 5.46483 11.8008 5.87499C12.2266 6.53515 12.2266 7.46483 11.8008 8.12499C11.1602 9.12108 9.84766 9.42577 8.88281 8.80468C7.53516 7.93358 7.53516 6.0664 8.875 5.19921C9.39844 4.86327 10.0273 4.78124 10.6445 4.97265Z"
+										fill="#8A8C99" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="add__row">
+					<div class="add__input-wrapper">
+						<div class="add__politic">
+							<input type="checkbox">
+							<p>Нажимая кнопку я соглашаюсь с <a href="#">политикой конфиденциальности</a> и <a
+									href="#">пользовательским
+									соглашением</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="add__tab-content add__tab-content_row">
 				<div class="add__tab-content-col add__tab-content-col_form">
-					<div class="add__input-wrapper">
+					<div class="add__input-wrapper add__input-wrapper_row">
 						<div class="add__count-wrapper">
 							<label for="title">Наименование клиники * <span>(Заголовок)</span></label>
 							<span class="add__count">50</span>
 						</div>
 						<input type="text" name="" id="title" required>
 					</div>
-					<div class="add__input-wrapper">
+					<div class="add__input-wrapper add__input-wrapper_row">
 						<div class="add__count-wrapper">
 							<label for="sdes">Краткое описание деятельности *</label>
 							<span class="add__count">100</span>
 						</div>
 						<input type="text" name="sdes" id="sdes" required>
 					</div>
-					<div class="add__input-wrapper">
+					<div class="add__input-wrapper add__input-wrapper_row">
 						<div class="add__count-wrapper">
 							<label for="des">Полное описание деятельности * (О клинике)</label>
 							<span class="add__count">300</span>
 						</div>
 						<textarea name="" id="des" rows="5"></textarea>
 					</div>
-					<div class="add__input-wrapper">
-						<label for="">Лечение <span>(Введите теги)</span></label>
-						<input type="text" name="hill">
+					<div class="add__row">
+						<div class="add__input-wrapper">
+							<label for="">Лечение <span>(Введите теги)</span></label>
+							<input type="text" name="hill">
+						</div>
+						<div class="add__input-wrapper">
+							<label for="">Категория <span>(Введите тэги)</span></label>
+							<input type="text" name="category">
+						</div>
 					</div>
 					<div class="add__input-wrapper">
-						<label for="">Категория <span>(Введите тэги)</span></label>
-						<input type="text" name="category">
+						<label for="">Диагностика <span>(Введите тэги)</span></label>
+						<input type="text" name="diagn">
 					</div>
 				</div>
 				<div class="add__tab-content-col add__tab-content-col_preview preview">
@@ -163,51 +176,65 @@
 			</div>
 			<div class="add__tab-content add__tab-content_row">
 				<div class="add__tab-content-col add__tab-content-col_form">
-					<div class="add__input-wrapper">
-						<label for="country">Страна *</label>
-						<div class="add__select-wrapper">
-							<select name="country" id="">
-								<option value="">Россия</option>
-								<option value="">Россия</option>
-								<option value="">Россия</option>
-								<option value="">Россия</option>
-								<option value="">Қазақстан</option>
-							</select>
+					<div class="add__row">
+						<div class="add__input-wrapper">
+							<label for="country">Страна *</label>
+							<div class="add__select-wrapper">
+								<select name="country" id="">
+									<option value="">Россия</option>
+									<option value="">Россия</option>
+									<option value="">Россия</option>
+									<option value="">Россия</option>
+									<option value="">Қазақстан</option>
+								</select>
+							</div>
+						</div>
+						<div class="add__input-wrapper">
+							<label for="region">Регион / область *</label>
+							<input type="text" name="" id="region" placeholder="Московская область">
 						</div>
 					</div>
-					<div class="add__input-wrapper">
-						<label for="region">Регион / область *</label>
-						<input type="text" name="" id="region" placeholder="Московская область">
+					<div class="add__row">
+						<div class="add__input-wrapper">
+							<label for="region">Город *</label>
+							<input type="text" name="" id="city" placeholder="Москова">
+						</div>
+						<div class="add__input-wrapper">
+							<label for="address">Улица, дом, офис *</label>
+							<input type="text" name="" id="address" placeholder="ул. Ленина, д.10, оф. 10">
+						</div>
 					</div>
-					<div class="add__input-wrapper">
-						<label for="address">Улица, дом, офис *</label>
-						<input type="text" name="" id="address" placeholder="ул. Ленина, д.10, оф. 10">
+					<div class="add__row">
+						<div class="add__input-wrapper">
+							<label for="postix">Почтовый индекс</label>
+							<input type="text" name="" id="postix" placeholder="130370">
+						</div>
+						<div class="add__input-wrapper">
+							<label for="adress">Координаты</label>
+							<input type="text" name="" id="coords" placeholder="40.7127837, -74.005941">
+						</div>
 					</div>
-					<div class="add__input-wrapper">
-						<label for="postix">Почтовый индекс</label>
-						<input type="text" name="" id="postix" placeholder="130370">
+					<div class="add__row">
+						<div class="add__input-wrapper">
+							<label for="site">Сайт <span>(если есть)</span></label>
+							<input type="text" name="" id="site" placeholder="https:/">
+						</div>
+						<div class="add__input-wrapper add__input-wrapper_border">
+							<label for="cmail">E-mail клиники <span>(для обращений)</span></label>
+							<input type="text" name="" id="cmail" placeholder="mail@klinik.ru">
+						</div>
 					</div>
-					<div class="add__input-wrapper">
-						<label for="adress">Координаты</label>
-						<input type="text" name="" id="coords" placeholder="40.7127837, -74.005941">
+					<div class="add__row">
+						<div class="add__input-wrapper add__input-wrapper_border">
+							<label for="cphone">Основной телефон клиники *</span></label>
+							<input type="tel" name="" id="cphone" placeholder="+7 (900) 999-00-99" required>
+						</div>
+						<div class="add__input-wrapper add__input-wrapper_border">
+							<label for="cphone2">Дополнительный телефон</span></label>
+							<input type="tel" name="" id="cphone2" placeholder="+7 (900) 999-00-99">
+						</div>
 					</div>
-					<div class="add__input-wrapper">
-						<label for="site">Сайт <span>(если есть)</span></label>
-						<input type="text" name="" id="site" placeholder="https:/">
-					</div>
-					<div class="add__input-wrapper add__input-wrapper_border">
-						<label for="cmail">E-mail клиники <span>(для обращений)</span></label>
-						<input type="text" name="" id="cmail" placeholder="mail@klinik.ru">
-					</div>
-					<div class="add__input-wrapper add__input-wrapper_border">
-						<label for="cphone">Основной телефон клиники *</span></label>
-						<input type="tel" name="" id="cphone" placeholder="+7 (900) 999-00-99" required>
-					</div>
-					<div class="add__input-wrapper add__input-wrapper_border">
-						<label for="cphone2">Дополнительный телефон</span></label>
-						<input type="tel" name="" id="cphone2" placeholder="+7 (900) 999-00-99">
-					</div>
-					<div class="add__input-wrapper">
+					<div class="add__input-wrapper add__input-wrapper_row">
 						<div class="add__radio-row">
 							<input type="radio" name="schedule" id="schedule-1">
 							<label for="schedule-1">
@@ -352,7 +379,7 @@
 			</div>
 			<div class="add__tab-content add__tab-content_row">
 				<div class="add__tab-content-col add__tab-content-col_form">
-					<div class="add__input-wrapper add__input-wrapper_border">
+					<div class="add__input-wrapper add__input-wrapper_border add__input-wrapper_row">
 						<label for="">Загрузите логотип клиники * <span>(1 изображение)</span></label>
 						<div class="image-upload" onclick="document.getElementById('file-input').click()">
 							<div class="add__file-upload">
@@ -363,7 +390,7 @@
 							<div class="thumbnail-container"></div>
 						</div>
 					</div>
-					<div class="add__input-wrapper">
+					<div class="add__input-wrapper add__input-wrapper_row">
 						<label for="">Загрузите фотографии клиники * <span>(1 изображение)</span></label>
 						<div class="multi-image-upload" onclick="document.getElementById('multi-file-input-unique').click()">
 							<div class="add__file-upload">
@@ -399,24 +426,25 @@
 					</div>
 				</div>
 			</div>
+			<div class="add__buttons">
+				<div class="add__button add__button_prev">
+					Назад
+				</div>
+				<div class="add__button add__button_next">
+					Далее
+				</div>
+				<button class="add__button add__button_submit popup-btn" data-path="popup-add">
+					Отправить
+				</button>
+			</div>
 		</form>
-		<div class="add__buttons">
-			<div class="add__button add__button_prev">
-				Назад
-			</div>
-			<div class="add__button add__button_next">
-				Далее
-			</div>
-			<button class="add__button add__button_submit">
-				Отправить
-			</button>
-		</div>
 	</div>
 </section>
 
 <script>
 	const btnNext = document.querySelector(".add__button_next")
 	const btnPrev = document.querySelector(".add__button_prev")
+	const btnSubmit = document.querySelector(".add__button_submit")
 
 	const tabNavigation = document.querySelectorAll(".add__tab")
 	const tabContent = document.querySelectorAll(".add__tab-content")
@@ -429,7 +457,6 @@
 		tabContent.forEach((element, index) => {
 			if (element.classList.contains("active")) {
 				activeIndex = index
-				console.log(activeIndex)
 			}
 		});
 
@@ -440,6 +467,11 @@
 		tabContent[activeIndex].classList.remove("active")
 		tabContent[activeIndex + 1].classList.add("active")
 		tabNavigation[activeIndex + 1].classList.add("active")
+
+		if (activeIndex + 1 == tabContent.length - 1) {
+			btnSubmit.style.display = "block"
+			btnNext.style.display = "none"
+		}
 
 		window.scrollTo({
 			top: 0,
@@ -458,6 +490,9 @@
 		if (activeIndex == 0) {
 			return
 		}
+
+		btnSubmit.removeAttribute("style")
+		btnNext.style.display = "block"
 
 		tabContent[activeIndex].classList.remove("active")
 		tabContent[activeIndex - 1].classList.add("active")
@@ -488,6 +523,7 @@
 	// Находим поля ввода (одни на странице)
 	const titleInput = document.querySelector('input[type="text"][id="title"]');
 	const descInput = document.querySelector('input[type="text"][name="sdes"]');
+	const adrCityInput = document.querySelector('input[type="text"][id="city"]');
 	const countrySelect = document.querySelector('select[name="country"]');
 	const regionInput = document.querySelector('input[type="text"][id="region"]');
 	const addressInput = document.querySelector('input[type="text"][id="address"]');
@@ -501,8 +537,8 @@
 		const country = countrySelect ? countrySelect.options[countrySelect.selectedIndex]?.text : '';
 		const region = regionInput ? regionInput.value : '';
 		const address = addressInput ? addressInput.value : '';
-
-		const fullAddress = [address, region, country].filter(Boolean).join(', ');
+		const city = adrCityInput ? adrCityInput.value : '';
+		const fullAddress = [address, city, region, country].filter(Boolean).join(', ');
 
 		previewCards.forEach(card => {
 			const previewAdr = card.querySelector('.preview__adr');
@@ -524,7 +560,6 @@
 		});
 	}
 
-	// Обновляем ВСЕ карточки при изменении полей
 	if (titleInput) {
 		titleInput.addEventListener('input', () => {
 			previewCards.forEach(card => {
@@ -547,13 +582,16 @@
 		});
 	}
 
-	// Обработчики для адреса
 	if (countrySelect) {
 		countrySelect.addEventListener('change', updateAddress);
 	}
 
 	if (regionInput) {
 		regionInput.addEventListener('input', updateAddress);
+	}
+
+	if (adrCityInput){
+		adrCityInput.addEventListener("input", updateAddress);
 	}
 
 	if (addressInput) {
@@ -645,4 +683,21 @@
 	function removeThumbnailUnique(element) {
 		element.parentElement.remove();
 	}
+
+	const button = document.querySelector('.add__show-password');
+	input = document.querySelector('.add__password');
+
+	function togglePassword() {
+		const type = input.type === 'password' ? 'text' : 'password';
+		input.type = type;
+	}
+
+	// Для touch-устройств
+	button.addEventListener('touchstart', function (e) {
+		e.preventDefault(); // Предотвращаем возможные побочные эффекты
+		togglePassword();
+	});
+
+	// Для десктопов
+	button.addEventListener('click', togglePassword);
 </script>

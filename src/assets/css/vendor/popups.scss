@@ -525,19 +525,19 @@
 }
 
 .test {
-  &__form{
+  &__form {
     height: 100%;
   }
 
-  &__content{
-    &.swiper-slide{
+  &__content {
+    &.swiper-slide {
       display: flex;
       flex-direction: column;
       height: auto;
     }
   }
 
-  &__swiper.swiper{
+  &__swiper.swiper {
     display: flex;
     height: 100%;
   }
@@ -858,41 +858,63 @@
     color: $blue-color;
     font-weight: 700;
     width: 100%;
+
+    &_add{
+      color: $bg-prim;
+      background-color: $blue-color;
+      margin: 0 auto;
+      display: block;
+      width: 180px;
+      text-align: center;
+    }
   }
 
-  &__pic{
+  &__pic {
     overflow: hidden;
     border-radius: 20px;
     margin-bottom: 20px;
     aspect-ratio: 1;
-    img{
+
+    img {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
   }
 
-  &__content{
+  &__content {
     padding: 20px;
     border-radius: 20px;
     background-color: $blue-color;
+
+    &_add {
+      background-color: transparent;
+    }
   }
 
-  &__title{
+  &__title {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 20px;
     text-align: center;
     font-weight: 600;
     color: $bg-prim;
+
+    &_add{
+      color: $prim;
+    }
   }
 
-  &__subtitle{
+  &__subtitle {
     color: #FFFFFFB2;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 40px;
     text-align: center;
+
+    &_add{
+      color: $prim;
+    }
   }
 }
 
@@ -915,33 +937,42 @@
       left: 750px;
       transition: 0.5s;
 
+      &_add{
+        max-width: 100%;
+
+        .result__pic{
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
+
       .close-popup {
         top: 60px;
         right: 30px;
       }
     }
 
-    &__pic{
+    &__pic {
       aspect-ratio: 1.6;
     }
 
-    &__content{
+    &__content {
       border-radius: 20px;
       padding: 72px 44px;
     }
 
-    &__title{
+    &__title {
       font-size: 48px;
       line-height: 54px;
       margin-bottom: 20px;
     }
 
-    &__subtitle{
+    &__subtitle {
       font-size: 20px;
       margin-bottom: 80px;
     }
 
-    &__button{
+    &__button {
       max-width: 200px;
       margin: 0 auto;
       font-size: 20px;

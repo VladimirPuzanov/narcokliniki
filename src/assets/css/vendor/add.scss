@@ -7,11 +7,8 @@
 
 	&__form {
 		border-radius: 20px;
-		border-width: 1px, 1px, 1px, 1px;
-		border-style: solid;
-		border-color: #EDEDEE;
+		border: solid 1px #EDEDEE;
 		overflow: hidden;
-		margin-bottom: 30px;
 	}
 
 	&__stages {
@@ -187,7 +184,7 @@
 			line-height: 16px;
 
 			a {
-				color: #2B374699;
+				color: $blue-color;
 
 				@media(hover : hover) {
 					&:hover {
@@ -201,6 +198,9 @@
 	&__buttons {
 		display: flex;
 		gap: 10px;
+		padding: 16px 20px;
+		padding-top: 14px;
+		max-width: 250px;
 	}
 
 	&__count-wrapper {
@@ -222,7 +222,6 @@
 		width: 100%;
 		font-size: 16px;
 		line-height: 24px;
-		color: $blue-color;
 		border-radius: 10px;
 		font-weight: 700;
 
@@ -238,6 +237,8 @@
 
 		&_submit {
 			display: none;
+			color: $bg-prim;
+			background-color: $blue-color;
 		}
 	}
 
@@ -460,4 +461,135 @@
 	line-height: 20px;
 	cursor: pointer;
 	font-size: 12px;
+}
+
+@media(min-width: 1024px){
+	.add{
+		&__stages{
+			padding: 40px 60px;
+		}
+
+		&__tab{
+			gap: 12px;
+
+			p{
+				font-size: 20px;
+				line-height: 28px;
+			}
+
+			span{
+				width: 30px;
+				height: 30px;
+				background-size: 14px 9px;
+
+			}
+
+			&:not(:last-child){
+				&::after{
+					height: 4px;
+					width: 100px;
+					margin-right: 20px;
+				}
+			}
+		}
+
+		&__tab-content{
+			padding: 40px 60px;
+
+			&_row{
+				gap: 100px;
+
+				&.active{
+					display: flex;
+				}
+			}
+		}
+
+		&__tab-content-col{
+			&_form{
+				width: 100%;
+			}
+
+			&_preview{
+				max-width: 530px;
+				width: 100%;
+				flex-shrink: 0;
+			}
+		}
+
+		&__title{
+			font-size: 36px;
+			line-height: 42px;
+			margin-bottom: 20px;
+		}
+
+		&__subtitle{
+			font-size: 18px;
+			line-height: 26px;
+			margin-bottom: 60px;
+		}
+
+		&__row{
+			display: flex;
+			gap: 20px;
+
+			&:not(:last-child){
+				margin-bottom: 40px;
+			}
+		}
+
+		&__input-wrapper{
+			margin-bottom: 0;
+			flex-basis: 100%;
+
+			label{
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+			input{
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+			&_row{
+				margin-bottom: 30px;
+			}
+		}
+
+		&__politic{
+			max-width: 460px;
+			p{
+				font-size: 13px;
+				line-height: 18px;
+			}
+		}
+
+		&__buttons{
+			padding: 40px 60px;
+			padding-top: 0;
+			margin-top: 0;
+			max-width: 350px;
+		}
+
+		&__schedule-day{
+			display: flex;
+			gap: 10px;
+			align-items: center;
+
+			p{
+				margin-bottom: 0;
+				width: 100%;
+				max-width: 120px;
+			}
+		}
+
+		&__schedule-time{
+			margin-bottom: 0;
+		}
+
+		&__schedule-inputs{
+			display: contents;
+		}
+	}
 }
