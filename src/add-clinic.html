@@ -28,31 +28,31 @@
 				Добавить клинику
 			</span>
 		</div>
-	</div>
-	<form action="" class="add__form">
-		<div class="add__stages">
-			<div class="add__tab active">
-				<span>
-				</span>
-				<p>Контактная информация</p>
+		<form action="" class="add__form">
+			<div class="add__stages-wrapper">
+				<div class="add__stages">
+					<div class="add__tab active">
+						<span>
+						</span>
+						<p>Контактная информация</p>
+					</div>
+					<div class="add__tab">
+						<span>
+						</span>
+						<p>Информация о клинике</p>
+					</div>
+					<div class="add__tab">
+						<span>
+						</span>
+						<p>Адрес и контакты</p>
+					</div>
+					<div class="add__tab">
+						<span>
+						</span>
+						<p>Медиафайлы</p>
+					</div>
+				</div>
 			</div>
-			<div class="add__tab">
-				<span>
-				</span>
-				<p>Информация о клинике</p>
-			</div>
-			<div class="add__tab">
-				<span>
-				</span>
-				<p>Адрес и контакты</p>
-			</div>
-			<div class="add__tab">
-				<span>
-				</span>
-				<p>Медиафайлы</p>
-			</div>
-		</div>
-		<div class="add__content">
 			<div class="add__tab-content active">
 				<h1 class="add__title">
 					Добавить клинику
@@ -63,7 +63,7 @@
 				</p>
 				<div class="add__input-wrapper">
 					<label for="sname">Фамилия</label>
-					<input type="text" name="" id="sname">
+					<input type="text" name="" id="sname" placeholder="Иванов">
 				</div>
 				<div class="add__input-wrapper">
 					<label for="name">Имя</label>
@@ -78,13 +78,13 @@
 					<input type="tel" name="" id="phone" required>
 				</div>
 				<div class="add__input-wrapper">
-					<label for="mail">E-mail * (будет использоваться как логин)</label>
+					<label for="mail">E-mail * <span>(будет использоваться как логин)</span></label>
 					<input type="email" name="" id="mail" required>
 				</div>
 				<div class="add__input-wrapper">
 					<label for="pass">Пароль *</label>
-					<div>
-						<input type="password" name="" id="pass" required>
+					<div class="add__password-wrapper">
+						<input class="add__password" type="password" name="" id="pass" required>
 						<button type="button" class="add__show-password">
 							<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -119,35 +119,22 @@
 							<label for="sdes">Краткое описание деятельности *</label>
 							<span class="add__count">100</span>
 						</div>
-						<input type="text" name="sdes" id="title" required>
+						<input type="text" name="sdes" id="sdes" required>
 					</div>
 					<div class="add__input-wrapper">
 						<div class="add__count-wrapper">
 							<label for="des">Полное описание деятельности * (О клинике)</label>
 							<span class="add__count">300</span>
 						</div>
-						<textarea name="" id="des"></textarea>
+						<textarea name="" id="des" rows="5"></textarea>
 					</div>
 					<div class="add__input-wrapper">
-						<label for="">Лечение <span>(Выберите тэги)</span></label>
-						<input type="hidden" name="hill">
-						<div class="add__tags-container">
-							<div class="add__tag">
-								Алкоголизм
-							</div>
-							<div class="add__tag">
-								Наркомания
-							</div>
-						</div>
+						<label for="">Лечение <span>(Введите теги)</span></label>
+						<input type="text" name="hill">
 					</div>
 					<div class="add__input-wrapper">
-						<label for="">Категория <span>(Выберите тэги)</span></label>
-						<input type="hidden" name="category">
-						<div class="add__tags-container">
-							<div class="add__tag">
-								Медицинский центр
-							</div>
-						</div>
+						<label for="">Категория <span>(Введите тэги)</span></label>
+						<input type="text" name="category">
 					</div>
 				</div>
 				<div class="add__tab-content-col add__tab-content-col_preview preview">
@@ -155,7 +142,7 @@
 						Превью карточки клиники
 					</p>
 					<p class="preview__subtitle">
-						Здесь вы можете посмотреть как будет отображаться информация о вашей организации на сайте 
+						Здесь вы можете посмотреть как будет отображаться информация о вашей организации на сайте
 					</p>
 					<div class="preview__card">
 						<picture class="preview__pic">
@@ -165,6 +152,12 @@
 							Название клиники
 						</p>
 						<p class="preview__des">Наркологическая клиника, реабилитационный центр </p>
+						<p class="preview__adr">
+							Кольский просп., 33, Мурманск, Россия
+						</p>
+						<p class="preview__phone">
+							+7(999) 999-99-99
+						</p>
 					</div>
 				</div>
 			</div>
@@ -223,99 +216,109 @@
 						</div>
 						<div class="add__schedule-wrapper">
 							<div class="add__radio-row">
-								<input type="radio" name="schedule" id="schedule-1">
-								<label for="schedule-1">
-									Круглосуточно
+								<input type="radio" name="schedule" id="schedule-2">
+								<label for="schedule-2">
+									Указать вручную
 								</label>
 							</div>
 							<div class="add__schedule">
 								<div class="add__schedule-form">
 									<div class="add__schedule-day">
-										Понедельник
+										<p>Понедельник</p>
 										<div class="add__schedule-inputs">
-											<div>
+											<div class="add__schedule-time">
 												<input type="time" name="" id="">
 												-
 												<input type="time" name="" id="">
 											</div>
-											<input type="checkbox" name="" id="">
+											<div class="add__schedule-checkbox-row">
+												<input type="checkbox" name="" id="">
+												<label for="">Выходной</label>
+											</div>
 										</div>
 									</div>
 									<div class="add__schedule-day">
-										Понедельник
+										<p>Вторник</p>
 										<div class="add__schedule-inputs">
-											<div>
+											<div class="add__schedule-time">
 												<input type="time" name="" id="">
 												-
 												<input type="time" name="" id="">
 											</div>
-											<input type="checkbox" name="" id="">
+											<div class="add__schedule-checkbox-row">
+												<input type="checkbox" name="" id="">
+												<label for="">Выходной</label>
+											</div>
 										</div>
 									</div>
 									<div class="add__schedule-day">
-										Вторник
+										<p>Среда</p>
 										<div class="add__schedule-inputs">
-											<div>
+											<div class="add__schedule-time">
 												<input type="time" name="" id="">
 												-
 												<input type="time" name="" id="">
 											</div>
-											<input type="checkbox" name="" id="">
+											<div class="add__schedule-checkbox-row">
+												<input type="checkbox" name="" id="">
+												<label for="">Выходной</label>
+											</div>
 										</div>
 									</div>
 									<div class="add__schedule-day">
-										Среда
+										<p>Четверг</p>
 										<div class="add__schedule-inputs">
-											<div>
+											<div class="add__schedule-time">
 												<input type="time" name="" id="">
 												-
 												<input type="time" name="" id="">
 											</div>
-											<input type="checkbox" name="" id="">
+											<div class="add__schedule-checkbox-row">
+												<input type="checkbox" name="" id="">
+												<label for="">Выходной</label>
+											</div>
 										</div>
 									</div>
 									<div class="add__schedule-day">
-										Четверг
+										<p>Пятница</p>
 										<div class="add__schedule-inputs">
-											<div>
+											<div class="add__schedule-time">
 												<input type="time" name="" id="">
 												-
 												<input type="time" name="" id="">
 											</div>
-											<input type="checkbox" name="" id="">
+											<div class="add__schedule-checkbox-row">
+												<input type="checkbox" name="" id="">
+												<label for="">Выходной</label>
+											</div>
 										</div>
 									</div>
 									<div class="add__schedule-day">
-										Пятница
+										<p>Суббота</p>
 										<div class="add__schedule-inputs">
-											<div>
+											<div class="add__schedule-time">
 												<input type="time" name="" id="">
 												-
 												<input type="time" name="" id="">
 											</div>
-											<input type="checkbox" name="" id="">
+											<div class="add__schedule-checkbox-row">
+												<input type="checkbox" name="" id="">
+												<label for="">Выходной</label>
+											</div>
 										</div>
 									</div>
 									<div class="add__schedule-day">
-										Суббота
+										<p>Воскресенье</p>
 										<div class="add__schedule-inputs">
-											<div>
+											<div class="add__schedule-time">
 												<input type="time" name="" id="">
 												-
 												<input type="time" name="" id="">
 											</div>
-											<input type="checkbox" name="" id="">
-										</div>
-									</div>
-									<div class="add__schedule-day">
-										Воскресенье
-										<div class="add__schedule-inputs">
-											<div>
-												<input type="time" name="" id="">
-												-
-												<input type="time" name="" id="">
+											<div class="add__schedule-checkbox-row">
+												<input type="checkbox" name="" id="">
+												<label for="">Выходной</label>
 											</div>
-											<input type="checkbox" name="" id="">
 										</div>
 									</div>
 								</div>
@@ -323,9 +326,80 @@
 						</div>
 					</div>
 				</div>
+				<div class="add__tab-content-col add__tab-content-col_preview preview">
+					<p class="preview__title">
+						Превью карточки клиники
+					</p>
+					<p class="preview__subtitle">
+						Здесь вы можете посмотреть как будет отображаться информация о вашей организации на сайте
+					</p>
+					<div class="preview__card">
+						<picture class="preview__pic">
+							<img src="assets/img/best-clinics/plug.webp" alt="Заглушка фотографии">
+						</picture>
+						<p class="preview__name">
+							Название клиники
+						</p>
+						<p class="preview__des">Наркологическая клиника, реабилитационный центр </p>
+						<p class="preview__adr">
+							Кольский просп., 33, Мурманск, Россия
+						</p>
+						<p class="preview__phone">
+							+7(999) 999-99-99
+						</p>
+					</div>
+				</div>
 			</div>
-
-		</div>
+			<div class="add__tab-content add__tab-content_row">
+				<div class="add__tab-content-col add__tab-content-col_form">
+					<div class="add__input-wrapper add__input-wrapper_border">
+						<label for="">Загрузите логотип клиники * <span>(1 изображение)</span></label>
+						<div class="image-upload" onclick="document.getElementById('file-input').click()">
+							<div class="add__file-upload">
+								<p>Нажмите для выбора файла</p>
+								<img src="assets/img/other/upload.png" alt="иконка загрузки" class="add__file-upload-icon">
+							</div>
+							<input type="file" id="file-input" accept="image/*" style="display: none;">
+							<div class="thumbnail-container"></div>
+						</div>
+					</div>
+					<div class="add__input-wrapper">
+						<label for="">Загрузите фотографии клиники * <span>(1 изображение)</span></label>
+						<div class="multi-image-upload" onclick="document.getElementById('multi-file-input-unique').click()">
+							<div class="add__file-upload">
+								<p>Нажмите чтобы добавить файл</p>
+								<img src="assets/img/other/upload.png" alt="иконка загрузки" class="add__file-upload-icon">
+							</div>
+							<input type="file" id="multi-file-input-unique" accept="image/*" multiple style="display: none;">
+						</div>
+						<div class="thumbnails-container-unique"></div>
+					</div>
+				</div>
+				<div class="add__tab-content-col add__tab-content-col_preview preview">
+					<p class="preview__title">
+						Превью карточки клиники
+					</p>
+					<p class="preview__subtitle">
+						Здесь вы можете посмотреть как будет отображаться информация о вашей организации на сайте
+					</p>
+					<div class="preview__card">
+						<picture class="preview__pic">
+							<img src="assets/img/best-clinics/plug.webp" alt="Заглушка фотографии">
+						</picture>
+						<p class="preview__name">
+							Название клиники
+						</p>
+						<p class="preview__des">Наркологическая клиника, реабилитационный центр </p>
+						<p class="preview__adr">
+							Кольский просп., 33, Мурманск, Россия
+						</p>
+						<p class="preview__phone">
+							+7(999) 999-99-99
+						</p>
+					</div>
+				</div>
+			</div>
+		</form>
 		<div class="add__buttons">
 			<div class="add__button add__button_prev">
 				Назад
@@ -333,6 +407,242 @@
 			<div class="add__button add__button_next">
 				Далее
 			</div>
+			<button class="add__button add__button_submit">
+				Отправить
+			</button>
 		</div>
-	</form>
+	</div>
 </section>
+
+<script>
+	const btnNext = document.querySelector(".add__button_next")
+	const btnPrev = document.querySelector(".add__button_prev")
+
+	const tabNavigation = document.querySelectorAll(".add__tab")
+	const tabContent = document.querySelectorAll(".add__tab-content")
+
+	btnNext.addEventListener("click", nextTab)
+	btnPrev.addEventListener("click", prevTab)
+
+	function nextTab() {
+		let activeIndex = 0
+		tabContent.forEach((element, index) => {
+			if (element.classList.contains("active")) {
+				activeIndex = index
+				console.log(activeIndex)
+			}
+		});
+
+		if (tabContent.length - 1 == activeIndex) {
+			return
+		}
+
+		tabContent[activeIndex].classList.remove("active")
+		tabContent[activeIndex + 1].classList.add("active")
+		tabNavigation[activeIndex + 1].classList.add("active")
+
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	}
+
+	function prevTab() {
+		let activeIndex
+		tabContent.forEach((element, index) => {
+			if (element.classList.contains("active")) {
+				activeIndex = index
+			}
+		});
+
+		if (activeIndex == 0) {
+			return
+		}
+
+		tabContent[activeIndex].classList.remove("active")
+		tabContent[activeIndex - 1].classList.add("active")
+
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	}
+
+	document.querySelectorAll('.add__input-wrapper').forEach(wrapper => {
+		const input = wrapper.querySelector('input, textarea');
+		const countSpan = wrapper.querySelector('.add__count');
+
+		if (!input || !countSpan) return;
+
+		const maxLength = parseInt(countSpan.textContent) || 0;
+		countSpan.textContent = `0/${maxLength}`;
+
+		input.setAttribute('maxlength', maxLength);
+
+		input.addEventListener('input', () => {
+			const currentLength = input.value.length;
+			countSpan.textContent = `${currentLength}/${maxLength}`;
+		});
+	});
+
+	// Находим поля ввода (одни на странице)
+	const titleInput = document.querySelector('input[type="text"][id="title"]');
+	const descInput = document.querySelector('input[type="text"][name="sdes"]');
+	const countrySelect = document.querySelector('select[name="country"]');
+	const regionInput = document.querySelector('input[type="text"][id="region"]');
+	const addressInput = document.querySelector('input[type="text"][id="address"]');
+	const phoneInput = document.querySelector('input[type="tel"][id="cphone"]');
+
+	// Находим все карточки превью
+	const previewCards = document.querySelectorAll('.preview__card');
+
+	// Функция обновления адреса
+	function updateAddress() {
+		const country = countrySelect ? countrySelect.options[countrySelect.selectedIndex]?.text : '';
+		const region = regionInput ? regionInput.value : '';
+		const address = addressInput ? addressInput.value : '';
+
+		const fullAddress = [address, region, country].filter(Boolean).join(', ');
+
+		previewCards.forEach(card => {
+			const previewAdr = card.querySelector('.preview__adr');
+			if (previewAdr && fullAddress) {
+				previewAdr.textContent = fullAddress;
+			}
+		});
+	}
+
+	// Функция обновления телефона
+	function updatePhone() {
+		const phone = phoneInput ? phoneInput.value : '';
+
+		previewCards.forEach(card => {
+			const previewPhone = card.querySelector('.preview__phone');
+			if (previewPhone && phone) {
+				previewPhone.textContent = phone;
+			}
+		});
+	}
+
+	// Обновляем ВСЕ карточки при изменении полей
+	if (titleInput) {
+		titleInput.addEventListener('input', () => {
+			previewCards.forEach(card => {
+				const previewName = card.querySelector('.preview__name');
+				if (previewName) {
+					previewName.textContent = titleInput.value || 'Название клиники';
+				}
+			});
+		});
+	}
+
+	if (descInput) {
+		descInput.addEventListener('input', () => {
+			previewCards.forEach(card => {
+				const previewDesc = card.querySelector('.preview__des');
+				if (previewDesc) {
+					previewDesc.textContent = descInput.value || 'Наркологическая клиника, реабилитационный центр';
+				}
+			});
+		});
+	}
+
+	// Обработчики для адреса
+	if (countrySelect) {
+		countrySelect.addEventListener('change', updateAddress);
+	}
+
+	if (regionInput) {
+		regionInput.addEventListener('input', updateAddress);
+	}
+
+	if (addressInput) {
+		addressInput.addEventListener('input', updateAddress);
+	}
+
+	// Обработчик для телефона
+	if (phoneInput) {
+		phoneInput.addEventListener('input', updatePhone);
+	}
+
+	// Инициализация при загрузке
+	updateAddress();
+	updatePhone();
+
+	const radioManual = document.querySelector('input[type="radio"][id="schedule-1"]'); // Круглосуточно
+	const radioManualNext = radioManual ? radioManual.nextElementSibling : null;
+	const scheduleWrapper = document.querySelector('.add__schedule');
+
+	if (radioManual && scheduleWrapper) {
+		document.querySelectorAll('input[name="schedule"]').forEach(radio => {
+			radio.addEventListener('change', () => {
+				if (radio.id === 'schedule-1') {
+					scheduleWrapper.classList.remove('active');
+				} else {
+					scheduleWrapper.classList.add('active');
+				}
+			});
+		});
+	}
+
+	const fileInput = document.getElementById('file-input');
+	const thumbnailContainer = document.querySelector('.thumbnail-container');
+	const previewPics = document.querySelectorAll('.preview__pic img');
+	const defaultImage = 'assets/img/best-clinics/plug.webp';
+
+	fileInput.addEventListener('change', (e) => {
+		if (e.target.files[0]) {
+			const reader = new FileReader();
+			reader.onload = (event) => {
+				// Создаем миниатюру
+				thumbnailContainer.innerHTML = `
+        <div class="thumbnail" onclick="event.stopPropagation(); removeImage()">
+          <img src="${event.target.result}" alt="Миниатюра">
+        </div>
+      `;
+
+				// Обновляем все превью
+				previewPics.forEach(img => {
+					img.src = event.target.result;
+				});
+			};
+			reader.readAsDataURL(e.target.files[0]);
+		}
+	});
+
+	function removeImage() {
+		// Удаляем миниатюру
+		thumbnailContainer.innerHTML = '';
+		fileInput.value = '';
+
+		// Возвращаем стандартное изображение во все превью
+		previewPics.forEach(img => {
+			img.src = defaultImage;
+		});
+	}
+
+	const multiFileInputUnique = document.getElementById('multi-file-input-unique');
+	const thumbnailsContainerUnique = document.querySelector('.thumbnails-container-unique');
+
+	multiFileInputUnique.addEventListener('change', (e) => {
+		if (e.target.files.length > 0) {
+			Array.from(e.target.files).forEach(file => {
+				const reader = new FileReader();
+				reader.onload = (event) => {
+					const thumbnail = document.createElement('div');
+					thumbnail.className = 'thumbnail-unique';
+					thumbnail.innerHTML = `
+          <img src="${event.target.result}" alt="Миниатюра">
+          <div class="delete-btn-unique" onclick="removeThumbnailUnique(this)">✕</div>
+        `;
+					thumbnailsContainerUnique.appendChild(thumbnail);
+				};
+				reader.readAsDataURL(file);
+			});
+		}
+	});
+
+	function removeThumbnailUnique(element) {
+		element.parentElement.remove();
+	}
+</script>
